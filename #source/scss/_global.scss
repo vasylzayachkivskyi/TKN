@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+button:focus,
+input:focus {
+    outline: transparent;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    min-width: 320px;
+    max-width: 100vw;
+    cursor: default;
+    font-family: 'Mont';
+    font-weight: 400;
+    color: var(--Black, #050505);
+    background: var(--Light-grey-shade-8, #F6F6F6);
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.pagewrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -0.25px;
+}
+
+.secttitle {
+    color: var(--Black, #050505);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 52px;
+}
+
+.greenbtn {
+    border-radius: 100px;
+    background: var(--Accent-green, #22F100);
+    color: var(--Black, #050505);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    padding: 10px 24px;
+    transition: .3s ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: #25D009;
+    }
+}
+
+.blackbtn {
+    border-radius: 100px;
+    background: var(--Black, #050505);
+    transition: .3s;
+    color: #FFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    height: 40px;
+
+    &:hover {
+        background: rgba(5, 5, 5, 0.90);
+        color: #FFF;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1384px;
+    }
+}
