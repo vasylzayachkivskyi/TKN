@@ -8,6 +8,35 @@
     &.change-bg {
         background-color: #fbfbfb;
     }
+
+    &.white {
+        background: linear-gradient(180deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.00) 90.34%);
+
+        .header__menu a {
+            color: #fbfbfb;
+        }
+
+        .header__lang p {
+            color: #fbfbfb;
+        }
+
+        .header__lang p:after {
+            background-image: url(../img/svg/lang_arrow_white.svg);
+        }
+
+        .header__lang p:before {
+            background-image: url(../img/svg/lang_icon_white.svg);
+        }
+
+        .header__btn {
+            color: #fbfbfb;
+            border: 1px solid #fbfbfb;
+        }
+
+        .burger span {
+            background: #fbfbfb;
+        }
+    }
 }
 
 .burger {
@@ -52,6 +81,7 @@
     }
 
     li {
+        position: relative;
         border-radius: 8px;
         background: rgba(218, 218, 218, 0);
         padding: 4px 16px;
@@ -61,6 +91,20 @@
         &:hover {
             background: rgba(218, 218, 218, 0.5);
         }
+
+        &.active {
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -16px;
+                left: 0;
+                background-color: #FBFBFB;
+                width: 100%;
+                height: 3px;
+                border-radius: 3px;
+            }
+        }
+
     }
 
     a {
@@ -256,6 +300,8 @@
 
         &.open {
             span {
+                background: #050505;
+
                 &:nth-child(1) {
                     transform: translateX(4px) translateY(-2px) rotate(45deg);
                 }
@@ -272,6 +318,10 @@
         }
     }
 
+    .header.white .burger.open span {
+        background: #050505;
+    }
+
     .header__nav {
         background-color: #f6f6f6;
         position: fixed;
@@ -282,7 +332,7 @@
         top: 0;
         right: 0;
         height: 100vh;
-        padding: 80px 0;
+        padding: 88px 0 80px;
         overflow: auto;
 
         &.open {
@@ -306,12 +356,15 @@
         padding: 16px 0;
         border-bottom: 1px solid rgba(209, 209, 209, 0.50);
         margin: 0 16px 48px;
-        p{
+
+        p {
             margin-bottom: 16px;
         }
-        li{
+
+        li {
             margin-bottom: 16px;
-            &:last-child{
+
+            &:last-child {
                 margin-bottom: 0;
             }
         }
@@ -322,6 +375,7 @@
         width: 100%;
     }
 
+    .header.white .header__menu,
     .header__menu {
         flex-wrap: wrap;
         width: 100%;
@@ -336,14 +390,22 @@
             border-radius: 0;
             margin-bottom: 16px;
 
-            &:first-child {
-                border-top: 1px solid rgba(209, 209, 209, 0.50);
-            }
-
             &+li {
                 margin: 0;
             }
+
+            a {
+                color: #050505;
+            }
+            &.active:after {
+               display: none;
+            }
         }
+    }
+
+    .header.white .header__btn {
+        color: #050505;
+        border: 1px solid #050505;
     }
 }
 
@@ -358,11 +420,24 @@
 }
 
 @media(max-width:767.8px) {
-    .header.white{
+    .header {
+        border-bottom: 0.5px solid var(--Light-grey, #D1D1D1);
+
+        &.white {
+            border-bottom: none;
+
+            .header__nav.open {
+                border-top: 0.5px solid var(--Light-grey, #D1D1D1);
+                top: 88px;
+            }
+        }
+    }
+
+    .header.white-bg {
         background-color: #f6f6f6;
     }
+
     .header__menu {
-        border-top: 0.5px solid var(--Light-grey, #D1D1D1);
 
         li:first-child {
             border-top: none;
@@ -375,16 +450,24 @@
 
     .header__nav {
         width: 100%;
-        top: 80px;
+        top: 89px;
         padding: 0 0 100px;
     }
 }
 
 @media(max-width:575.8px) {
-    .header__logo img {
-        width: 92px;
+    .header.white .header__nav.open{
+        top: 48px;
     }
     .header__nav {
-        top: 70px;
+        top: 49px;
+    }
+
+    .header__inner {
+        height: 48px;
+    }
+
+    .header__logo img {
+        width: 92px;
     }
 }

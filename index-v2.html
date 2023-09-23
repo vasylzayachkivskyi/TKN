@@ -8,7 +8,6 @@
     <title>TKN</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="css/lib/rangeSlider.min.css">
     <link rel="stylesheet" href="css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -82,8 +81,8 @@
 
         <main class="main">
 
-            <section class="heroscreen">
-                <img src="img/heroscreen.png" alt="Real estate" class="heroscreen__bg">
+            <section class="heroscreen" style="background-color: #fff">
+                <video src="video/Main.mp4" autoplay loop class="heroscreen__video"></video>
                 <div class="container">
                     <div class="heroscreen__inner">
                         <div class="row">
@@ -110,18 +109,8 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
+                                        <div class="inputfield">
                                             <input type="text" placeholder="Покупка">
-                                            <div class="dropdown-box">
-                                                <ul>
-                                                    <li class="active">
-                                                        Продаж
-                                                    </li>
-                                                    <li>
-                                                        Оренда
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="heroscreen__filter-item">
@@ -136,24 +125,8 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
+                                        <div class="inputfield">
                                             <input type="text" placeholder="Площа, м²">
-                                            <div class="dropdown-box">
-                                                <div class="dropdown-row">
-                                                    <div class="extra-controls">
-                                                        <input type="text" class="js-input-from" value="0" />
-                                                        <input type="text" class="js-input-to" value="0" />
-                                                    </div>
-                                                    <div class="range-slider">
-                                                        <input type="text" class="js-range-slider" value="" />
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-row">
-                                                    <button class="blackbtn ">
-                                                        Застосувати
-                                                    </button>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="heroscreen__filter-item">
@@ -170,27 +143,11 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
+                                        <div class="inputfield">
                                             <input type="text" placeholder="Бюджет, $">
-                                            <div class="dropdown-box">
-                                                <div class="dropdown-row">
-                                                    <div class="extra-controls">
-                                                        <input type="text" class="js-input-from" value="0" />
-                                                        <input type="text" class="js-input-to" value="0" />
-                                                    </div>
-                                                    <div class="range-slider">
-                                                        <input type="text" class="js-range-slider" value="" />
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown-row">
-                                                    <button class="blackbtn ">
-                                                        Застосувати
-                                                    </button>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <button class="greenbtn filter-btn">Знайти</button>
+                                    <button class="greenbtn">Знайти</button>
                                 </div>
                             </form>
                         </div>
@@ -1246,7 +1203,6 @@
 
 
     <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/rangeSlider.min.js"></script>
     <script src="js/lib/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
