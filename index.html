@@ -149,9 +149,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
-                                                    <button class="blackbtn ">
+                                                    <span class="blackbtn">
                                                         Застосувати
-                                                    </button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,9 +183,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
-                                                    <button class="blackbtn ">
+                                                    <span class="blackbtn ">
                                                         Застосувати
-                                                    </button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1113,18 +1113,55 @@
                             <div class="col-xl-5 col-lg-6">
                                 <div class="selection__right">
                                     <form>
-                                        <label class="inputfield">
+                                        <div class="inputfield">
                                             <p>
                                                 Ім’я
                                             </p>
                                             <input type="text" placeholder="Як до вас звертатись?">
-                                        </label>
-                                        <label class="inputfield">
+                                        </div>
+                                        <label class="inputfield phone-field">
                                             <p>
                                                 Номер телефону
                                             </p>
-                                            <input type="text" placeholder="+380">
+                                            <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                            <input type="text" value="+380">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">+359</span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Austria
+                                                    </p>
+                                                    <span class="code">+43</span>
+                                                    <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">
+                                                        +359
+                                                    </span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                            </ul>
                                         </label>
+                                        <div class="form-slide">
+                                            <span>Бюджет</span>
+                                            <div class="range-slider">
+                                                <input type="text" class="js-range-slider" value="" />
+                                            </div>
+                                            <div class="extra-controls">
+                                                <input type="text" class="js-input-from" value="0" />
+                                                <span>-</span>
+                                                <input type="text" class="js-input-to" value="0" />
+                                            </div>
+                                        </div>
                                         <label class="checkfield">
                                             <input type="checkbox">
                                             <span>Під власний бізнес</span>
@@ -1133,7 +1170,7 @@
                                             <input type="checkbox">
                                             <span>Для пасивного доходу</span>
                                         </label>
-                                        <button class="greenbtn">
+                                        <button class="formbtn greenbtn sendbtn">
                                             Отримати підбірку
                                         </button>
                                     </form>

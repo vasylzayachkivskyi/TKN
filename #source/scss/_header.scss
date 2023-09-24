@@ -171,7 +171,9 @@
             line-height: 24px;
             letter-spacing: 0.15px;
             cursor: pointer;
-            text-align-last: left;
+            text-align: left;
+            border-radius: 8px;
+            transition: .3s;
 
             &:before {
                 content: '';
@@ -185,8 +187,7 @@
                 transition: .3s ease-in-out;
             }
 
-            &.active,
-            &:hover {
+            &.active {
                 &:before {
                     opacity: 1;
                 }
@@ -210,6 +211,9 @@
         background: var(--White, #FBFBFB);
         box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.04);
         padding: 8px;
+        li:hover{
+            background: rgba(209, 209, 209, 0.30);
+        }
     }
 
     p:hover {

@@ -125,6 +125,25 @@ $(document).ready(function () {
         }
     });
 
+    $('.dropdown-box li').on('click', function () {
+        $('.dropdown-box li').removeClass('active');
+        $(this).addClass('active');
+        var operation = $(this).text().trim();
+        $(this).closest('.has-dropdown').find('input').val(operation);
+    });
+
+    // PHONE CODE DROPDOWN ----------- //
+    $('.phone-field input').on('click', function(){
+        $(this).closest('.phone-field').find('ul').slideToggle();
+    });
+
+    $('.inputfield.phone-field ul li').click(function () {
+        var imgSrc = $(this).find('img').attr('src');
+        var code = $(this).find('.code').text().trim();
+        $('.inputfield.phone-field .flag').attr('src', imgSrc);
+        $('.inputfield.phone-field input').val(code);
+    });
+
     // slider ---- //
     $('.gallery-slider').each(function () {
 
@@ -159,7 +178,7 @@ $(document).ready(function () {
         $('.counter-numbers').each(function () {
             var number = $(this)[0],
                 numberTop = number.getBoundingClientRect().top,
-                start = +number.innerHTML, 
+                start = +number.innerHTML,
                 end = +number.dataset.max;
 
             window.addEventListener('scroll', function onScroll() {
@@ -175,6 +194,13 @@ $(document).ready(function () {
             });
         });
     }
+
+    //  SEND BUTTON ANIMATION ---- //
+    $('.sendbtn').on('click', function () {
+        $(this).addClass('sending');
+        setTimeout(() => $(this).addClass('done'), 1500);
+        // setTimeout(() => window.location.reload(), 2500);
+    });
 
     // -------------------- POPUP ------------------------ //
     $('.popup__btn').on('click', function () {
@@ -199,7 +225,6 @@ $(document).ready(function () {
 
 
     //  RANGE SLIDER
-
     var $range = $(".js-range-slider"),
         $inputFrom = $(".js-input-from"),
         $inputTo = $(".js-input-to"),

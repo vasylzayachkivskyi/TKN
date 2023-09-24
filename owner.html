@@ -823,42 +823,78 @@
                                             </p>
                                             <input type="text" placeholder="Як до вас звертатись?">
                                         </label>
-                                        <label class="inputfield">
+                                        <label class="inputfield phone-field">
                                             <p>
                                                 Номер телефону
                                             </p>
-                                            <input type="text" placeholder="+380">
+                                            <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                            <input type="text" value="+380">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">+359</span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Austria
+                                                    </p>
+                                                    <span class="code">+43</span>
+                                                    <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">
+                                                        +359
+                                                    </span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                            </ul>
                                         </label>
-                                        <label class="inputfield">
+                                        <div class="inputfield operation has-dropdown">
                                             <p>
                                                 Тип операції
                                             </p>
-                                            <input type="text" placeholder="Продаж">
-                                        </label>
-                                        <label class="inputfield area">
+                                            <input type="text" value="Продаж" readonly>
+                                            <div class="dropdown-box">
+                                                <ul>
+                                                    <li class="active">
+                                                        Продаж
+                                                    </li>
+                                                    <li>
+                                                        Оренда
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="inputfield area">
                                             <p>
                                                 Площа
                                             </p>
                                             <input type="text" placeholder="Введіть площу">
-                                        </label>
-                                        <label class="inputfield price">
+                                        </div>
+                                        <div class="inputfield price">
                                             <p>
                                                 Бажана вартість
                                             </p>
-                                            <input type="text" placeholder="Введіть площу">
-                                        </label>
-                                        <label class="inputfield">
+                                            <input type="text" placeholder="Введіть вартість">
+                                        </div>
+                                        <div class="inputfield">
                                             <p>
                                                 Адреса
                                             </p>
                                             <input type="text" placeholder="Введіть адресу">
-                                        </label>
+                                        </div>
                                         <label class="checkfield">
                                             <input type="checkbox">
                                             <span>Не знаю вартість об’єкта</span>
                                         </label>
-                                        <span>*Ми працюємо по Києву та області</span>
-                                        <button class="greenbtn">
+                                        <span class="info-text">*Ми працюємо по Києву та області</span>
+                                        <button class="formbtn greenbtn">
                                             Відправити заявку
                                         </button>
                                     </form>
@@ -941,17 +977,98 @@
             <div class="container">
                 <div class="popup__wrapper">
                     <div class="popup__body">
-                        <div class="popup__title">
+                        <div class="popup__close">
+                            <img src="img/svg/close.svg" alt="close">
+                        </div>
+                        <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                        <div class="popup__head">
                             <h2>
                                 Оцінимо вашу нерухомість
                             </h2>
+                            <p>
+                                Заповніть форму і ми зателефонуємо до вас протягом робочого дня.
+                            </p>
                         </div>
                         <div class="popup__content">
-                            <p>
-                                For our well-known customer, who is active in the fiber and paper industry, we are
-                                currently
-                                looking for an IT system administrator for a permanent position in the Aalen area.
-                            </p>
+                            <form>
+                                <label class="inputfield">
+                                    <p>
+                                        Ім’я
+                                    </p>
+                                    <input type="text" placeholder="Як до вас звертатись?">
+                                </label>
+                                <label class="inputfield phone-field">
+                                    <p>
+                                        Номер телефону
+                                    </p>
+                                    <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                    <input type="text" value="+380">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">+359</span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Austria
+                                            </p>
+                                            <span class="code">+43</span>
+                                            <img src="img/svg/flag-Austria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">
+                                                +359
+                                            </span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                    </ul>
+                                </label>
+                                <div class="inputfield operation has-dropdown">
+                                    <p>
+                                        Тип операції
+                                    </p>
+                                    <input type="text" value="Продаж" readonly>
+                                    <div class="dropdown-box">
+                                        <ul>
+                                            <li class="active">
+                                                Продаж
+                                            </li>
+                                            <li>
+                                                Оренда
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <label class="inputfield area">
+                                    <p>
+                                        Площа
+                                    </p>
+                                    <input type="text" placeholder="Введіть площу">
+                                </label>
+                                <label class="inputfield price">
+                                    <p>
+                                        Бажана вартість
+                                    </p>
+                                    <input type="text" placeholder="Введіть площу">
+                                </label>
+                                <label class="inputfield">
+                                    <p>
+                                        Адреса
+                                    </p>
+                                    <input type="text" placeholder="Введіть адресу">
+                                </label>
+
+                                <span>*Ми працюємо по Києву та області</span>
+                                <button class="form-btn greenbtn sendbtn">
+                                    Відправити заявку
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
