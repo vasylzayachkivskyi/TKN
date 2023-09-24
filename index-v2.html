@@ -109,8 +109,18 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield">
+                                        <div class="inputfield has-dropdown">
                                             <input type="text" placeholder="Покупка">
+                                            <div class="dropdown-box">
+                                                <ul>
+                                                    <li class="active">
+                                                        Продаж
+                                                    </li>
+                                                    <li>
+                                                        Оренда
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="heroscreen__filter-item">
@@ -125,8 +135,26 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield">
+                                        <div class="inputfield has-dropdown">
                                             <input type="text" placeholder="Площа, м²">
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-row">
+                                                    <div class="sliderange" data-min="0" data-max="20000">
+                                                        <div class="extra-controls">
+                                                            <input type="text" class="js-input-from" value="0">
+                                                            <input type="text" class="js-input-to" value="0">
+                                                        </div>
+                                                        <div class="range-slider">
+                                                            <input type="text" class="js-range-slider" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-row">
+                                                    <span class="blackbtn">
+                                                        Застосувати
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="heroscreen__filter-item">
@@ -143,11 +171,31 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield">
+                                        <div class="inputfield has-dropdown">
                                             <input type="text" placeholder="Бюджет, $">
+                                            <div class="dropdown-box">
+                                                <div class="dropdown-row">
+                                                    <div class="sliderange" data-min="0" data-max="20000">
+                                                        <div class="extra-controls">
+                                                            <input type="text" class="js-input-from" value="0"
+                                                                data-min="0">
+                                                            <input type="text" class="js-input-to" value="0"
+                                                                data-max="20000">
+                                                        </div>
+                                                        <div class="range-slider">
+                                                            <input type="text" class="js-range-slider" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-row">
+                                                    <span class="blackbtn ">
+                                                        Застосувати
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <button class="greenbtn">Знайти</button>
+                                    <button class="greenbtn filter-btn">Знайти</button>
                                 </div>
                             </form>
                         </div>
@@ -178,7 +226,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -247,7 +321,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -316,7 +416,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -385,7 +511,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -454,7 +606,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -523,7 +701,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -592,7 +796,33 @@
                         <div class="swiper-slide">
                             <div class="proposition__slide">
                                 <div class="proposition__slide-image">
-                                    <img src="img/slide_img.png" alt="img">
+                                    <div class="top-row">
+                                        <span>
+                                            Ціна 2500 $/м<sup>2</sup>
+                                        </span>
+                                        <span>
+                                            NEW
+                                        </span>
+                                    </div>
+                                    <div class="swiper gallery-slider">
+                                        <div class="slider-prev"></div>
+                                        <div class="slider-next"></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/slide_img.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
@@ -729,8 +959,10 @@
                                     <div class="descr">
                                         <p>
                                             Чітке розуміння специфіки кожної ніші та бізнесу, а також велика кількість
-                                            компаній з якими ми тісно співпрацюємо і які розвиваються сьогодні, дозволяє нам
-                                            максимально точно запропонувати ваш обʼєкт орендарям, та відповідно швидко здати
+                                            компаній з якими ми тісно співпрацюємо і які розвиваються сьогодні, дозволяє
+                                            нам
+                                            максимально точно запропонувати ваш обʼєкт орендарям, та відповідно швидко
+                                            здати
                                             в оренду.
                                         </p>
                                     </div>
@@ -795,7 +1027,8 @@
                                     </h5>
                                     <div class="descr">
                                         <p>
-                                            Наше прагнення зрозуміти та допомогти реалізувати унікальні інвестиційні цілі
+                                            Наше прагнення зрозуміти та допомогти реалізувати унікальні інвестиційні
+                                            цілі
                                             кожного клієнта дозволяє нам будувати довгострокові партнерські відносини.
                                         </p>
                                     </div>
@@ -818,7 +1051,8 @@
                                     <div class="descr">
                                         <p>
                                             Ми ретельно підходимо до кожного етапу під час угоди, перевіряємо технічні
-                                            характеристики обʼєкту, ознайомлюємось зі всіма документами та супроводжуємо під
+                                            характеристики обʼєкту, ознайомлюємось зі всіма документами та супроводжуємо
+                                            під
                                             час угоди переконуючись, що у клієнтів є все необхідне для цього.
                                         </p>
                                     </div>
@@ -888,18 +1122,58 @@
                             <div class="col-xl-5 col-lg-6">
                                 <div class="selection__right">
                                     <form>
-                                        <label class="inputfield">
+                                        <div class="inputfield">
                                             <p>
                                                 Ім’я
                                             </p>
                                             <input type="text" placeholder="Як до вас звертатись?">
-                                        </label>
-                                        <label class="inputfield">
+                                        </div>
+
+                                        <label class="inputfield phone-field">
                                             <p>
                                                 Номер телефону
                                             </p>
-                                            <input type="text" placeholder="+380">
+                                            <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                            <input type="text" value="+380">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">+359</span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Austria
+                                                    </p>
+                                                    <span class="code">+43</span>
+                                                    <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">
+                                                        +359
+                                                    </span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                            </ul>
                                         </label>
+                                        <div class="form-slide">
+                                            <span>Бюджет</span>
+                                            <div class="sliderange" data-min="0" data-max="20000">
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" value="" />
+                                                </div>
+                                                <div class="extra-controls">
+                                                    <input type="text" class="js-input-from" value="0" data-min="0">
+                                                    <span>-</span>
+                                                    <input type="text" class="js-input-to" value="0" data-max="20000">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <label class="checkfield">
                                             <input type="checkbox">
                                             <span>Під власний бізнес</span>
@@ -908,7 +1182,7 @@
                                             <input type="checkbox">
                                             <span>Для пасивного доходу</span>
                                         </label>
-                                        <button class="greenbtn sendbtn">
+                                        <button class="formbtn greenbtn sendbtn">
                                             Отримати підбірку
                                         </button>
                                     </form>
@@ -1118,7 +1392,7 @@
                             <li class="title">
                                 <h5>
                                     Меню
-                                </h5> 
+                                </h5>
                             </li>
                             <li><a href="#">Купити</a></li>
                             <li><a href="#">Орендувати</a></li>
@@ -1132,7 +1406,7 @@
                             <li class="title">
                                 <h5>
                                     Ми в соцмережах
-                                </h5> 
+                                </h5>
                             </li>
                             <li><a href="#">Instagram</a></li>
                             <li><a href="#">Facebook</a></li>
@@ -1151,7 +1425,8 @@
                             </li>
                             <li>
                                 <p>
-                                    Будемо раді проконсультувати вас в особистій розмові по телефону. Ви можете зв'язатися з нами з понеділка по п'ятницю з 9:00 до 18:00, сб. з 10:00 до 16:00.
+                                    Будемо раді проконсультувати вас в особистій розмові по телефону. Ви можете
+                                    зв'язатися з нами з понеділка по п'ятницю з 9:00 до 18:00, сб. з 10:00 до 16:00.
                                 </p>
                             </li>
                         </ul>
@@ -1200,7 +1475,6 @@
             </div>
         </footer>
     </div>
-
 
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/swiper-bundle.min.js"></script>

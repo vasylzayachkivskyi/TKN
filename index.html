@@ -140,12 +140,14 @@
                                             <input type="text" placeholder="Площа, м²">
                                             <div class="dropdown-box">
                                                 <div class="dropdown-row">
-                                                    <div class="extra-controls">
-                                                        <input type="text" class="js-input-from" value="0" />
-                                                        <input type="text" class="js-input-to" value="0" />
-                                                    </div>
-                                                    <div class="range-slider">
-                                                        <input type="text" class="js-range-slider" value="" />
+                                                    <div class="sliderange" data-min="0" data-max="20000">
+                                                        <div class="extra-controls">
+                                                            <input type="text" class="js-input-from" value="0">
+                                                            <input type="text" class="js-input-to" value="0">
+                                                        </div>
+                                                        <div class="range-slider">
+                                                            <input type="text" class="js-range-slider" value="">
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
@@ -174,12 +176,16 @@
                                             <input type="text" placeholder="Бюджет, $">
                                             <div class="dropdown-box">
                                                 <div class="dropdown-row">
-                                                    <div class="extra-controls">
-                                                        <input type="text" class="js-input-from" value="0" />
-                                                        <input type="text" class="js-input-to" value="0" />
-                                                    </div>
-                                                    <div class="range-slider">
-                                                        <input type="text" class="js-range-slider" value="" />
+                                                    <div class="sliderange" data-min="0" data-max="20000">
+                                                        <div class="extra-controls">
+                                                            <input type="text" class="js-input-from" value="0"
+                                                                data-min="0">
+                                                            <input type="text" class="js-input-to" value="0"
+                                                                data-max="20000">
+                                                        </div>
+                                                        <div class="range-slider">
+                                                            <input type="text" class="js-range-slider" value="" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
@@ -954,8 +960,10 @@
                                     <div class="descr">
                                         <p>
                                             Чітке розуміння специфіки кожної ніші та бізнесу, а також велика кількість
-                                            компаній з якими ми тісно співпрацюємо і які розвиваються сьогодні, дозволяє нам
-                                            максимально точно запропонувати ваш обʼєкт орендарям, та відповідно швидко здати
+                                            компаній з якими ми тісно співпрацюємо і які розвиваються сьогодні, дозволяє
+                                            нам
+                                            максимально точно запропонувати ваш обʼєкт орендарям, та відповідно швидко
+                                            здати
                                             в оренду.
                                         </p>
                                     </div>
@@ -1020,7 +1028,8 @@
                                     </h5>
                                     <div class="descr">
                                         <p>
-                                            Наше прагнення зрозуміти та допомогти реалізувати унікальні інвестиційні цілі
+                                            Наше прагнення зрозуміти та допомогти реалізувати унікальні інвестиційні
+                                            цілі
                                             кожного клієнта дозволяє нам будувати довгострокові партнерські відносини.
                                         </p>
                                     </div>
@@ -1043,7 +1052,8 @@
                                     <div class="descr">
                                         <p>
                                             Ми ретельно підходимо до кожного етапу під час угоди, перевіряємо технічні
-                                            характеристики обʼєкту, ознайомлюємось зі всіма документами та супроводжуємо під
+                                            характеристики обʼєкту, ознайомлюємось зі всіма документами та супроводжуємо
+                                            під
                                             час угоди переконуючись, що у клієнтів є все необхідне для цього.
                                         </p>
                                     </div>
@@ -1119,6 +1129,7 @@
                                             </p>
                                             <input type="text" placeholder="Як до вас звертатись?">
                                         </div>
+
                                         <label class="inputfield phone-field">
                                             <p>
                                                 Номер телефону
@@ -1153,13 +1164,15 @@
                                         </label>
                                         <div class="form-slide">
                                             <span>Бюджет</span>
-                                            <div class="range-slider">
-                                                <input type="text" class="js-range-slider" value="" />
-                                            </div>
-                                            <div class="extra-controls">
-                                                <input type="text" class="js-input-from" value="0" />
-                                                <span>-</span>
-                                                <input type="text" class="js-input-to" value="0" />
+                                            <div class="sliderange" data-min="0" data-max="20000">
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" value="" />
+                                                </div>
+                                                <div class="extra-controls">
+                                                    <input type="text" class="js-input-from" value="0" data-min="0">
+                                                    <span>-</span>
+                                                    <input type="text" class="js-input-to" value="0" data-max="20000">
+                                                </div>
                                             </div>
                                         </div>
                                         <label class="checkfield">
@@ -1380,7 +1393,7 @@
                             <li class="title">
                                 <h5>
                                     Меню
-                                </h5> 
+                                </h5>
                             </li>
                             <li><a href="#">Купити</a></li>
                             <li><a href="#">Орендувати</a></li>
@@ -1394,7 +1407,7 @@
                             <li class="title">
                                 <h5>
                                     Ми в соцмережах
-                                </h5> 
+                                </h5>
                             </li>
                             <li><a href="#">Instagram</a></li>
                             <li><a href="#">Facebook</a></li>
@@ -1413,7 +1426,8 @@
                             </li>
                             <li>
                                 <p>
-                                    Будемо раді проконсультувати вас в особистій розмові по телефону. Ви можете зв'язатися з нами з понеділка по п'ятницю з 9:00 до 18:00, сб. з 10:00 до 16:00.
+                                    Будемо раді проконсультувати вас в особистій розмові по телефону. Ви можете
+                                    зв'язатися з нами з понеділка по п'ятницю з 9:00 до 18:00, сб. з 10:00 до 16:00.
                                 </p>
                             </li>
                         </ul>

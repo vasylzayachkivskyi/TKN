@@ -229,8 +229,8 @@ $(document).ready(function () {
         $inputFrom = $(".js-input-from"),
         $inputTo = $(".js-input-to"),
         instance,
-        min = 0,
-        max = 1000,
+        min = $(".sliderange").attr('data-min'),
+        max = $(".sliderange").attr('data-max'),
         from = 0,
         to = 0;
 
@@ -239,8 +239,8 @@ $(document).ready(function () {
         type: "double",
         min: min,
         max: max,
-        from: 200,
-        to: 800,
+        from: 1000,
+        to: 6000,
         onStart: updateInputs,
         onChange: updateInputs
     });
