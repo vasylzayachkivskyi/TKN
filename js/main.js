@@ -47,7 +47,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             991: {
-                spaceBetween: 20,
+                spaceBetween: 16,
             },
         }
     });
@@ -124,6 +124,57 @@ $(document).ready(function () {
             $('.has-dropdown').find('.dropdown-box').slideUp();
         }
     });
+
+    // slider ---- //
+    $('.gallery-slider').each(function () {
+
+        var swiper = new Swiper(this, {
+            loop: true,
+            navigation: {
+                nextEl: ".slider-next",
+                prevEl: ".slider-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+        });
+
+        // Отримуємо кнопки прокручування для поточного слайдера
+        var prevButton = $(this).find('.slider-prev');
+        var nextButton = $(this).find('.slider-next');
+
+        // Додаємо обробники подій на кнопки для поточного слайдера
+        prevButton.on('click', function () {
+            swiper.slidePrev();
+        });
+
+        nextButton.on('click', function () {
+            swiper.slideNext();
+        });
+    });
+
+    // counter -------------- //
+    if ($('.counter-numbers').length) {
+        $('.counter-numbers').each(function () {
+            var number = $(this)[0],
+                numberTop = number.getBoundingClientRect().top,
+                start = +number.innerHTML, 
+                end = +number.dataset.max;
+
+            window.addEventListener('scroll', function onScroll() {
+                if (window.pageYOffset > numberTop - window.innerHeight) {
+                    this.removeEventListener('scroll', onScroll);
+                    var interval = setInterval(function () {
+                        number.innerHTML = ++start;
+                        if (start == end) {
+                            clearInterval(interval);
+                        }
+                    }, 20);
+                }
+            });
+        });
+    }
 
     // -------------------- POPUP ------------------------ //
     $('.popup__btn').on('click', function () {

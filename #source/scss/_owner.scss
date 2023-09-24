@@ -91,6 +91,155 @@
     line-height: 120%;
 }
 
+
+// steps section -------------------------- //
+
+.steps {
+    padding-bottom: 194px;
+
+    .steps__title {
+        color: var(--Black, #050505);
+        text-align: center;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        margin-bottom: 120px;
+    }
+
+    .col-lg-5 {
+        margin-bottom: 180px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.steps__inner {
+    .linesect {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            background-color: #050505;
+            z-index: 1;
+        }
+    }
+}
+
+.steps__inner-row {
+    position: relative;
+
+    .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: #050505;
+        border-radius: 50%;
+        position: absolute;
+        font-size: 18px;
+        line-height: 130%;
+        color: #FBFBFB;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 5;
+    }
+
+    &:last-child {
+        padding-top: 128px;
+    }
+}
+
+.steps__inner-img {
+    text-align: center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.steps__inner-content {
+    h4 {
+        color: var(--Black, #050505);
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    >p {
+        padding-top: 8px;
+        color: var(--Black-shade-5, #828282);
+        font-family: Mont;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0.1px;
+    }
+
+    >ul {
+        margin-top: 40px;
+        >li {
+            padding: 32px 0;
+            border-bottom: 1px solid #D1D1D1;
+            display: flex;
+
+            &:first-child {
+                border-top: 1px solid #D1D1D1;
+            }
+
+            ul {
+                padding-left: 20px;
+
+                li {
+                    list-style: disc;
+
+                    &::marker {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+    }
+
+    p {
+        color: var(--Black, #050505);
+        font-family: Mont;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0.3px;
+    }
+}
+
+.steps__inner-btn {
+    margin-top: 72px;
+    width: 246px;
+}
+
+
+
+
 // objects section ------------- //
 
 .objects {
@@ -134,10 +283,9 @@
     }
 }
 
-.proposition__slide-image {
+.objects__slide-image {
     transition: .3s ease-in-out;
     height: 197px;
-    border: 1px solid var(--Light-grey, #D1D1D1);
     border-radius: 16px 16px 0 0;
     border-bottom: none;
     overflow: hidden;
@@ -146,6 +294,51 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.gallery-slider {
+    width: 100%;
+    height: 100%;
+
+    .slider-prev {
+        background-image: url(../img/svg/slider-arrow-prev.svg);
+        left: 0;
+    }
+
+    .slider-next {
+        background-image: url(../img/svg/slider-arrow-next.svg);
+        right: 0;
+    }
+
+    .slider-next,
+    .slider-prev {
+        position: absolute;
+        z-index: 22;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: cover;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .swiper-pagination-fraction {
+        bottom: 0;
+        padding-bottom: 5px;
+        left: 0;
+        width: 100%;
+        color: var(--White, #FBFBFB);
+        text-align: center;
+        font-family: Mont;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: linear-gradient(180deg, rgba(7, 23, 58, 0.00) 0%, rgba(5, 5, 5, 0.70) 100%);
     }
 }
 
@@ -283,15 +476,17 @@
 .questions__item {
     padding: 40px 0;
     border-bottom: 1px solid #D1D1D1;
-    &:first-child{
+
+    &:first-child {
         border-top: 1px solid #D1D1D1;
     }
 
     .descr {
         padding-top: 50px;
         display: none;
+
         ol,
-        ul{
+        ul {
             padding-left: 20px;
         }
 
@@ -318,6 +513,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    cursor: pointer;
+
     i {
         position: absolute;
         top: 50%;
@@ -409,14 +606,15 @@
     transform: translateY(-10px);
 }
 
-.popup__title{
+.popup__title {
     color: var(--White, #FBFBFB);
-text-align: center;
-font-family: Mont;
-font-size: 36px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%; /* 43.2px */
+    text-align: center;
+    font-family: Mont;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 43.2px */
 }
 
 
@@ -461,10 +659,12 @@ line-height: 120%; /* 43.2px */
         padding: 130px 0 100px;
     }
 }
+
 @media(max-width: 991.8px) {
     .questions__item .descr {
         padding-top: 35px;
     }
+
     .objects {
         padding: 0 0 90px;
     }
@@ -495,9 +695,11 @@ line-height: 120%; /* 43.2px */
     .questions__item-head {
         font-size: 22px;
     }
+
     .questions {
         padding: 90px 0 70px;
     }
+
     .questions__title {
         margin-bottom: 40px;
     }
@@ -518,15 +720,19 @@ line-height: 120%; /* 43.2px */
     .questions__item .descr {
         padding-top: 24px;
     }
+
     .questions__title {
         margin-bottom: 27px;
     }
+
     .questions__item-head {
         font-size: 18px;
     }
+
     .questions {
         padding: 48px 0 40px;
     }
+
     .objects__title {
         margin-bottom: 24px;
     }
