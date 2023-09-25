@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TKN</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/rangeSlider.min.css">
     <link rel="stylesheet" href="css/lib/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -110,7 +111,7 @@
                                             </svg>
                                         </div>
                                         <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Покупка">
+                                            <input type="text" placeholder="Покупка" readonly>
                                             <div class="dropdown-box">
                                                 <ul>
                                                     <li class="active">
@@ -136,7 +137,7 @@
                                             </svg>
                                         </div>
                                         <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Площа, м²">
+                                            <input type="text" placeholder="Площа, м²" readonly>
                                             <div class="dropdown-box">
                                                 <div class="dropdown-row">
                                                     <div class="sliderange" data-min="0" data-max="20000">
@@ -172,7 +173,7 @@
                                             </svg>
                                         </div>
                                         <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Бюджет, $">
+                                            <input type="text" placeholder="Бюджет, $" readonly>
                                             <div class="dropdown-box">
                                                 <div class="dropdown-row">
                                                     <div class="sliderange" data-min="0" data-max="20000">
@@ -1477,6 +1478,7 @@
     </div>
 
     <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/rangeSlider.min.js"></script>
     <script src="js/lib/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
