@@ -110,8 +110,10 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Покупка" readonly>
+                                        <div class="inputfield">
+                                            <div class="has-dropdown">
+                                                <input type="text" placeholder="Продаж" readonly>
+                                            </div>
                                             <div class="dropdown-box">
                                                 <ul>
                                                     <li class="active">
@@ -136,22 +138,26 @@
                                                     fill="#FBFBFB" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Площа, м²" readonly>
-                                            <div class="dropdown-box">
+                                        <div class="inputfield">
+                                            <div class="has-dropdown">
+                                                <input type="text" placeholder="Площа, м²" readonly>
+                                            </div>
+                                            <div class="dropdown-box" data-symbol="м²">
                                                 <div class="dropdown-row">
-                                                    <div class="sliderange" data-min="0" data-max="20000">
+                                                    <div class="sliderange" data-min="0" data-max="250">
                                                         <div class="extra-controls">
-                                                            <input type="text" class="js-input-from" value="0">
-                                                            <input type="text" class="js-input-to" value="0">
+                                                            <input type="text" class="js-input-from" value="0"
+                                                                data-min="0">
+                                                            <input type="text" class="js-input-to" value="0"
+                                                                data-max="20000">
                                                         </div>
                                                         <div class="range-slider">
-                                                            <input type="text" class="js-range-slider" value="">
+                                                            <input type="text" class="js-range-slider" value="" />
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
-                                                    <span class="blackbtn">
+                                                    <span class="blackbtn dropdown-btn">
                                                         Застосувати
                                                     </span>
                                                 </div>
@@ -172,9 +178,11 @@
                                                     stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <div class="inputfield has-dropdown">
-                                            <input type="text" placeholder="Бюджет, $" readonly>
-                                            <div class="dropdown-box">
+                                        <div class="inputfield">
+                                            <div class="has-dropdown">
+                                                <input type="text" placeholder="Бюджет, $" readonly>
+                                            </div>
+                                            <div class="dropdown-box" data-symbol="$">
                                                 <div class="dropdown-row">
                                                     <div class="sliderange" data-min="0" data-max="20000">
                                                         <div class="extra-controls">
@@ -189,7 +197,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="dropdown-row">
-                                                    <span class="blackbtn ">
+                                                    <span class="blackbtn dropdown-btn">
                                                         Застосувати
                                                     </span>
                                                 </div>

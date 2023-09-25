@@ -737,6 +737,7 @@
                     width: 100%;
                     transition: 0.3s;
                     border-radius: 8px;
+                    cursor: pointer;
 
                     &:before {
                         content: '';
@@ -764,8 +765,7 @@
         }
 
         &.price,
-        &.area,
-        &.operation {
+        &.area{
             &:after {
                 content: '';
                 position: absolute;
@@ -792,7 +792,7 @@
         }
 
         &.operation {
-            &:after {
+            .has-dropdown:after {
                 background-image: url(../img/svg/lang_arrow_white.svg);
                 top: 70%;
             }
@@ -821,6 +821,7 @@
             letter-spacing: 0.1px;
             padding: 10px 16px;
             background: transparent;
+            cursor: pointer;
 
             &::placeholder {
                 color: rgba(209, 209, 209, 0.80);

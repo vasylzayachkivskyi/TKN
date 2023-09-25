@@ -185,6 +185,30 @@ h1 {
 }
 
 
+.has-dropdown{
+    position: relative;
+    cursor: pointer;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 13px;
+        width: 18px;
+        height: 18px;
+        background-image: url(../img/svg/lang_arrow.svg);
+        background-size: cover;
+    }
+    &.active {
+        &:after {
+            transform: rotate(180deg) translateY(50%);
+        }
+
+    }
+}
+
+
 
 
 

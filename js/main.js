@@ -115,13 +115,21 @@ $(document).ready(function () {
     // DROPDOWN MENU ------------ //
     $('.has-dropdown').on('click', function () {
         $(this).toggleClass('active');
-        $(this).find('.dropdown-box').slideToggle();
+        $(this).next('.dropdown-box').slideToggle();
+    });
+    $('.dropdown-btn').on('click', function () {
+        var budgetMin = $(this).closest('.dropdown-box').find('.js-input-from').val();
+        var budgetMax = $(this).closest('.dropdown-box').find('.js-input-to').val();
+        var inputSymbol = $(this).closest('.dropdown-box').attr('data-symbol');
+        $(this).closest('.dropdown-box').slideUp();
+        $(this).closest('.dropdown-box').removeClass('active');
+        $(this).closest('.inputfield').find('.has-dropdown input').val(budgetMin + '-' + budgetMax + inputSymbol);
     });
     $(document).on('click', function (event) {
         var target = $(event.target);
-        if (!target.closest('.has-dropdown').length) {
+        if (!target.closest('.has-dropdown, .sliderange').length) {
             $('.has-dropdown').removeClass('active');
-            $('.has-dropdown').find('.dropdown-box').slideUp();
+            $('.has-dropdown').next('.dropdown-box').slideUp();
         }
     });
 
@@ -129,7 +137,7 @@ $(document).ready(function () {
         $('.dropdown-box li').removeClass('active');
         $(this).addClass('active');
         var operation = $(this).text().trim();
-        $(this).closest('.has-dropdown').find('input').val(operation);
+        $(this).closest('.inputfield').find('.has-dropdown input').val(operation);
     });
 
     // PHONE CODE DROPDOWN ----------- //
