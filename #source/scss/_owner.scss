@@ -694,7 +694,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
-        >span {
+        .infotext {
             color: #FBFBFB;
             text-align: right;
             font-size: 10px;
@@ -1168,6 +1168,7 @@
 
     .steps__inner-btn {
         margin-top: 32px;
+        width: 100%;
     }
 
     .steps__inner-content>ul>li {

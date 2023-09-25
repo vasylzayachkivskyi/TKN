@@ -141,7 +141,7 @@ $(document).ready(function () {
     });
 
     // PHONE CODE DROPDOWN ----------- //
-    $('.phone-field input').on('click', function(){
+    $('.phone-field input').on('click', function () {
         $(this).closest('.phone-field').find('ul').slideToggle();
     });
 
@@ -167,11 +167,8 @@ $(document).ready(function () {
             },
         });
 
-        // Отримуємо кнопки прокручування для поточного слайдера
         var prevButton = $(this).find('.slider-prev');
         var nextButton = $(this).find('.slider-next');
-
-        // Додаємо обробники подій на кнопки для поточного слайдера
         prevButton.on('click', function () {
             swiper.slidePrev();
         });
@@ -232,63 +229,60 @@ $(document).ready(function () {
     });
 
 
-    //  RANGE SLIDER
-    var $range = $(".js-range-slider"),
-        $inputFrom = $(".js-input-from"),
-        $inputTo = $(".js-input-to"),
-        instance,
-        min = $(".sliderange").attr('data-min'),
-        max = $(".sliderange").attr('data-max'),
-        from = 0,
-        to = 0;
 
-    $range.ionRangeSlider({
-        skin: "round",
-        type: "double",
-        min: min,
-        max: max,
-        from: 1000,
-        to: 6000,
-        onStart: updateInputs,
-        onChange: updateInputs
-    });
-    instance = $range.data("ionRangeSlider");
 
-    function updateInputs(data) {
-        from = data.from;
-        to = data.to;
+    $('.sliderange').each(function () {
+        var $sliderange = $(this),
+            $range = $sliderange.find(".js-range-slider"),
+            $inputFrom = $sliderange.find(".js-input-from"),
+            $inputTo = $sliderange.find(".js-input-to"),
+            instance,
+            min = $sliderange.attr('data-min'),
+            max = $sliderange.attr('data-max'),
+            from = $sliderange.attr('data-min'),
+            to = $sliderange.attr('data-max');
+            console.log($sliderange);
 
-        $inputFrom.prop("value", from);
-        $inputTo.prop("value", to);
-    }
-
-    $inputFrom.on("input", function () {
-        var val = $(this).prop("value");
-
-        // validate
-        if (val < min) {
-            val = min;
-        } else if (val > to) {
-            val = to;
-        }
-
-        instance.update({
-            from: val
+        $range.ionRangeSlider({
+            skin: "round",
+            type: "double",
+            min: min,
+            max: max,
+            from: from,
+            to: to,
+            onStart: updateInputs,
+            onChange: updateInputs
         });
-    });
-
-    $inputTo.on("input", function () {
-        var val = $(this).prop("value");
-
-        // validate
-        if (val < from) {
-            val = from;
-        } else if (val > max) {
-            val = max;
+        instance = $range.data("ionRangeSlider");
+        function updateInputs(data) {
+            from = data.from;
+            to = data.to;
+            $inputFrom.prop("value", from);
+            $inputTo.prop("value", to);
         }
 
-        instance.update({
-            to: val
+        $inputFrom.on("input", function () {
+            var val = $(this).prop("value");
+            if (val < min) {
+                val = min;
+            } else if (val > to) {
+                val = to;
+            }
+            instance.update({
+                from: val
+            });
+        });
+
+        $inputTo.on("input", function () {
+            var val = $(this).prop("value");
+            if (val < from) {
+                val = from;
+            } else if (val > max) {
+                val = max;
+            }
+            instance.update({
+                to: val
+            });
         });
     });
 
