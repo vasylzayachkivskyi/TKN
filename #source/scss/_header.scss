@@ -10,8 +10,8 @@
     }
 
     &.white {
-        background: linear-gradient(180deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.00) 90.34%);
         transition: .3s;
+        background: linear-gradient(180deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.00) 90.34%);
 
         .black-logo {
             display: none;
@@ -34,8 +34,8 @@
         }
 
         .header__btn {
-            color: #fbfbfb;
             border: 1px solid #fbfbfb;
+            color: #fbfbfb;
         }
 
         .burger span {
