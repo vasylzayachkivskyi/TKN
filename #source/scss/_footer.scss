@@ -9,6 +9,28 @@
 }
 
 .footer__col {
+    &:nth-child(1),
+    &:nth-child(2){
+        a {
+            position: relative;
+            padding-bottom: 1px;
+            &:after{
+                content: '';
+                width: 0;
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: #FFF;
+                transition: .3s;
+            }
+            &:hover{
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+    }
     h5 {
         color: var(--White, #FBFBFB);
         font-size: 16px;
@@ -26,6 +48,10 @@
         font-weight: 500;
         line-height: 170%;
         letter-spacing: 0.5px;
+        transition: .3s;
+        &:hover{
+            color: #FFF;
+        }
     }
 
     p {

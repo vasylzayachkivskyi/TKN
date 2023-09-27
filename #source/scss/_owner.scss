@@ -577,13 +577,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transition: .4s;
+            transform-origin: center;
+        }
+        &:before {
+            transform: translate(-50%, -50%) rotate(-90deg);
         }
     }
 
     &.active {
         i:before {
-            transform: rotate(-90deg) translate(0%, 0%);
-            left: 32%;
+            transform: rotate(0deg) translate(-50%, -50%);
+            left: 50%;
         }
     }
 }

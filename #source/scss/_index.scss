@@ -99,7 +99,7 @@
             line-height: 20px;
         }
 
-       
+
     }
 
     .inputfield {
@@ -138,6 +138,7 @@
     top: calc(100% + 2px);
     left: 0;
     display: none;
+
 
     ul {
 
@@ -186,11 +187,50 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 16px;
+        }
 
+        .budget-field,
+        .area-field {
+            position: relative;
+            width: 45%;
 
             input {
-                width: 45%;
+                width: 100%;
             }
+
+            &:after {
+                color: var(--Mid-black, #212121);
+                font-family: Mont;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .budget-field:after {
+            content: '$';
+        }
+
+        .area-field:after {
+            content: 'м²';
+        }
+
+        .range-slider {
+            padding: 0 11px;
+        }
+
+        .irs-from,
+        .irs-to {
+            visibility: visible !important;
+        }
+
+        .irs--round {
+            padding: 0 -10px;
         }
 
         .irs--round .irs-handle {
@@ -715,13 +755,14 @@
 .selection__right {
     position: relative;
     z-index: 2;
-    .info-text{
+
+    .info-text {
         color: var(--White, #FBFBFB);
         text-align: center;
         font-size: 10px;
         font-style: normal;
         font-weight: 500;
-        line-height: 140%; 
+        line-height: 140%;
         letter-spacing: 0.01px;
     }
 
@@ -731,6 +772,19 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .inputrow {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .checkfield,
+        .info-text {
+            width: 206px;
+            text-align: left;
+        }
     }
 
     .inputfield {
@@ -818,7 +872,8 @@
                 background-image: url(../img/svg/lang_arrow_white.svg);
                 top: 70%;
             }
-            input{
+
+            input {
                 cursor: pointer;
             }
         }
@@ -950,6 +1005,32 @@
             justify-content: space-between;
             margin-bottom: 16px;
 
+            .budget-field {
+                position: relative;
+                width: 45%;
+    
+                input {
+                    width: 100%;
+                }
+    
+                &:after {
+                    color: rgba(209,209,209,0.8);
+                    font-family: Mont;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+                    position: absolute;
+                    right: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+    
+            .budget-field:after {
+                content: '$';
+            }
+
             span {
                 font-size: 16px;
                 color: #D1D1D1;
@@ -971,6 +1052,19 @@
                 line-height: 120%;
                 letter-spacing: 0.1px;
             }
+        }
+
+        .range-slider {
+            padding: 0 11px;
+        }
+
+        .irs-from,
+        .irs-to {
+            visibility: visible !important;
+        }
+
+        .irs--round {
+            padding: 0 -10px;
         }
 
         .irs--round .irs-handle {
@@ -1489,6 +1583,13 @@
 
 @media(max-width: 991.8px) {
 
+    .selection__right .inputrow .checkfield,
+    .selection__right .inputrow .info-text {
+        width: 47%;
+    }
+
+
+
     .selection__right .form-slide .extra-controls input {
         width: 47%;
     }
@@ -1645,6 +1746,15 @@
 }
 
 @media(max-width: 767.8px) {
+    .selection__right .inputrow {
+        flex-wrap: wrap;
+    }
+
+    .selection__right .inputrow .checkfield,
+    .selection__right .inputrow .info-text {
+        width: 100%;
+    }
+
     .selection__right .inputfield.phone-field ul {
         width: 100%;
     }
@@ -1779,12 +1889,17 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
                     transition: .4s;
+                    transform-origin: center;
+                }
+
+                &:before {
+                    transform: translate(-50%, -50%) rotate(-90deg);
                 }
             }
 
             &.active {
                 i:before {
-                    transform: rotate(-90deg) translate(0%, 0%);
+                    transform: rotate(0deg) translate(0%, 0%);
                     left: 32%;
                 }
             }
