@@ -194,7 +194,7 @@ $(document).ready(function () {
                         if (start == end) {
                             clearInterval(interval);
                         }
-                    }, 20);
+                    }, 1);
                 }
             });
         });
