@@ -302,6 +302,12 @@ $(document).ready(function () {
     });
 
 
+        // Plyr.js 
+        if($('#video-player').length){
+            const player = new Plyr("#video-player");
+        }
+
+
 
 
 
