@@ -235,7 +235,7 @@
     position: absolute;
     right: 31px;
     top: -100px;
-    
+
     h4 {
         margin-bottom: 24px;
         color: var(--White, #FBFBFB);
@@ -244,7 +244,7 @@
         font-weight: 500;
         line-height: 120%;
     }
-    
+
     &-info {
         border-radius: 16px;
         background: var(--Black, #050505);
@@ -254,7 +254,8 @@
 
         li {
             margin-bottom: 16px;
-            &:last-child{
+
+            &:last-child {
                 margin-bottom: 0;
             }
         }
