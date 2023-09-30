@@ -200,6 +200,21 @@ $(document).ready(function () {
         });
     }
 
+    // about-agents SLIDER ----- //
+    var swiper = new Swiper(".about-agents__slider", {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        speed: 800,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
     //  SEND BUTTON ANIMATION ---- //
     $('.sendbtn').on('click', function () {
         $(this).addClass('sending');
@@ -241,7 +256,7 @@ $(document).ready(function () {
             max = $sliderange.attr('data-max'),
             from = $sliderange.attr('data-min'),
             to = $sliderange.attr('data-max');
-            console.log($sliderange);
+        console.log($sliderange);
 
         $range.ionRangeSlider({
             skin: "round",

@@ -114,6 +114,30 @@ h1 {
         background: #25D009;
     }
 }
+.whitebtn {
+    padding: 10px 16px;
+    color: var(--Black,#050505);
+    font-family: Mont;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    border-radius: 100px;
+    border: 1px solid var(--Black,#050505);
+    transition: .3s;
+    img {
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+    }
+    &:hover{
+        background: var(--Light-grey-shade-5, #E8E8E8);
+    }
+    &:active{
+        background: var(--Light-grey-shade-5, #E3E3E3);
+    }
+}
 
 .blackbtn {
     border-radius: 100px;
