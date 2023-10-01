@@ -112,6 +112,11 @@ h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    img {
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+    }
 
     &:hover {
         background: #25D009;
@@ -129,6 +134,7 @@ h1 {
     border-radius: 100px;
     border: 1px solid var(--Black,#050505);
     transition: .3s;
+    display: inline-block;
     img {
         margin-right: 8px;
         width: 18px;

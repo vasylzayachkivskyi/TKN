@@ -2221,6 +2221,10 @@
             margin-bottom: 8px;
         }
     }
+    .widget__inner{
+        border-radius: 20px;
+        overflow: hidden;
+    }
 
     .partners {
         padding-bottom: 24px;
@@ -2229,6 +2233,9 @@
 }
 
 @media(max-width: 350px) {
+    .proposition__slide {
+        max-width: 290px;
+    }
     .count__inner-content>h3 {
         font-size: 35px;
     }
