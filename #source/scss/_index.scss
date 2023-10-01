@@ -952,6 +952,23 @@
                     display: flex;
                     align-items: center;
 
+                    &:before {
+                        content: '';
+                        background-image: url(../img/svg/loaded_file.svg);
+                        width: 15px;
+                        height: 15px;
+                        background-size: cover;
+                        animation: 2s linear infinite loading;
+                        margin-right: 8px;
+                        display: none;
+                    }
+
+                    &.loaded{
+                        &:before {
+                            display: inline-block;
+                        }
+                    }
+
                     img {
                         width: 18px;
                         margin-right: 8px;

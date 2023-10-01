@@ -308,42 +308,46 @@ $(document).ready(function () {
     }
 
     // input file ------ //
+    $('input[type="file"]').change(function () {
+        var fileInput = $(this);
+        var label = fileInput.closest('.inputfield.file').find('.fake-input p');
+        var removeButton = $('<p class="remove-file"><img src="img/svg/remove_file_btn.svg" alt="file"></p>');
+        // Додаємо обробник події для кнопки видалення
+        removeButton.click(function () {
+            fileInput.val('');
+            label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
+            removeButton.remove();
+            label.removeClass('loaded')
+        });
 
-        // Виберіть ваш елемент input type=file за допомогою id або класу і встановіть обробник подій на подію change
-        $('input[type="file"]').change(function() {
-            var fileInput = $(this);
-            var label = fileInput.closest('.inputfield.file').find('.fake-input p');
-            var removeButton = $('<p class="remove-file"><img src="img/svg/remove_file_btn.svg" alt="file"></p>');
-            
-            if (fileInput.prop('files').length > 0) {
-                var fileName = fileInput.prop('files')[0].name;
-                var fileExtension = fileName.split('.').pop().toLowerCase();
-                
-                // Масив допустимих розширень файлів
-                var allowedExtensions = ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg', 'gif'];
-                
-                if ($.inArray(fileExtension, allowedExtensions) !== -1) {
-                    // Змінюємо текст та картинку, якщо файл валідний
-                    label.html('<img src="img/svg/file_download_icon.svg" alt="file"> ' + fileName);
-                    fileInput.closest('.inputfield.file').append(removeButton);
-                    
-                    // Додаємо обробник події для кнопки видалення
-                    removeButton.click(function() {
-                        fileInput.val('');
-                        label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
-                        removeButton.remove();
-                    });
-                } else {
-                    // Якщо файл не валідний, виводимо повідомлення і скидаємо вибір файлу
-                    alert('Допустимі формати файлів: pdf, doc, docx, png, jpg, jpeg, gif');
-                    fileInput.val('');
-                    label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
-                }
+        if (fileInput.prop('files').length > 0) {
+
+
+            var fileName = fileInput.prop('files')[0].name;
+            var fileExtension = fileName.split('.').pop().toLowerCase();
+
+            // Масив допустимих розширень файлів
+            var allowedExtensions = ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg', 'gif'];
+
+            if ($.inArray(fileExtension, allowedExtensions) !== -1) {
+                // Змінюємо текст та картинку, якщо файл валідний
+                label.addClass('loaded').text('Завантаження файлу');
+                fileInput.closest('.inputfield.file').append(removeButton);
+                setTimeout(function () {
+                    label.removeClass('loaded').html('<img src="img/svg/file_download_icon.svg" alt="file"> ' + fileName);
+                }, 1500);
             } else {
-                // Якщо файл не вибраний, повертаємо початковий текст та картинку
+                // Якщо файл не валідний, виводимо повідомлення і скидаємо вибір файлу
+                $('.popup-not-supported').addClass('active');
+                fileInput.val('');
                 label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
             }
-        });
+
+        } else {
+            // Якщо файл не вибраний, повертаємо початковий текст та картинку
+            label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
+        }
+    });
 
 
 

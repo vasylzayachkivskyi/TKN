@@ -433,7 +433,8 @@
         margin-top: 56px;
     }
 }
-.remove-file{
+
+.remove-file {
     border: none;
     background-color: transparent;
     width: 18px;
@@ -443,10 +444,68 @@
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
-    img{
+
+    img {
         margin: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+
+// popup
+
+.popup__window.popup-not-supported {
+    background: rgba(33, 33, 33, 0.25);
+
+    .popup__body {
+        max-width: 700px;
+        border-radius: 16px;
+        background: var(--Light-grey-shade-8, #F6F6F6);
+        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+        padding: 32px 24px;
+    }
+
+    .popup__content {
+        max-width: 100%;
+
+        p {
+            color: rgba(5, 5, 5, 0.70);
+            font-family: Mont;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0.15px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #D1D1D1;
+        }
+
+        .popup__close {
+            text-align: right;
+            display: block;
+
+            span {
+                color: var(--Black, #050505);
+                font-family: Mont;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 0.15px;
+                display: inline-block;
+                margin: 0 0 0 auto;
+                padding: 10px 24px;
+                border-radius: 100px;
+                transition: .3s;
+                cursor: pointer;
+
+                &:hover {
+                    background: var(--Light-grey-shade-5, #E8E8E8);
+                }
+            }
+        }
     }
 }
 
@@ -568,6 +627,11 @@
 }
 
 @media (max-width:767.8px) {
+    .popup__window.popup-not-supported .popup__content .popup__close {
+       position: relative;
+       right: initial;
+    }
+
     .cp-form {
         position: relative;
         padding: 64px 0 55px;
@@ -593,6 +657,7 @@
             display: none;
         }
     }
+
     .cp-feedback__video .plyr--video {
         height: 300px;
     }
@@ -615,6 +680,7 @@
     .cp-form .checkfield span {
         text-align: left;
     }
+
     .cp-faq {
         padding-bottom: 90px;
     }
