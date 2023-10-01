@@ -440,6 +440,7 @@
         position: relative;
         padding: 64px 0 55px;
         margin: 0;
+        background-color: #050505;
 
         &:after {
             content: "";
@@ -461,9 +462,6 @@
         }
     }
 
-    .broker-form {
-        background-color: #050505;
-    }
 
     .broker-form__inner .selection__right .formbtn {
         margin-top: 32px;
