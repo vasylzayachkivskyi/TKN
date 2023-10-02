@@ -539,10 +539,14 @@
     .cp-services__title {
         margin: 0 auto 70px;
     }
-}
 
-.cp-services__item p {
-    font-size: 18px;
+    .cp-form__inner {
+        padding: 60px 50px 88px;
+    }
+
+    .cp-services__item p {
+        font-size: 18px;
+    }
 }
 
 @media (max-width:1199.8px) {
@@ -628,8 +632,8 @@
 
 @media (max-width:767.8px) {
     .popup__window.popup-not-supported .popup__content .popup__close {
-       position: relative;
-       right: initial;
+        position: relative;
+        right: initial;
     }
 
     .cp-form {

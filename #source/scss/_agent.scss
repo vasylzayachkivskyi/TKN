@@ -334,7 +334,7 @@
 
 .broker-form__inner {
     position: relative;
-    padding: 60px 50px 88px;
+    padding: 60px 0px 88px;
     border-radius: 16px;
     overflow: hidden;
     background-color: #050505;
@@ -353,6 +353,9 @@
     .selection__right .formbtn {
         margin-top: 57px;
     }
+    .checkfield{
+        margin: 0 0 0 auto;
+    }
 }
 
 
@@ -360,6 +363,9 @@
 //  ADAPTIVE ----------------- //
 
 @media (max-width:1399.8px) {
+    .broker-form__inner {
+        padding: 60px 50px 88px;
+    }
     .agent__inner {
         padding: 20px;
     }
