@@ -963,7 +963,7 @@
                         display: none;
                     }
 
-                    &.loaded{
+                    &.loaded {
                         &:before {
                             display: inline-block;
                         }
@@ -1012,6 +1012,7 @@
             padding: 9px 16px;
             background: transparent;
             transition: .3s;
+            outline: none;
 
             &::placeholder {
                 color: rgba(209, 209, 209, 0.80);
@@ -1934,6 +1935,10 @@
 }
 
 @media(max-width: 767.8px) {
+    .selection__right .inputfield .dropdown-box {
+        width: 100%;
+    }
+
     .selection__right .inputrow {
         flex-wrap: wrap;
     }

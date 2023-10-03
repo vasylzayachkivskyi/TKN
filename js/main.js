@@ -245,61 +245,62 @@ $(document).ready(function () {
 
 
 
+    if ($('.sliderange').length) {
+        $('.sliderange').each(function () {
+            var $sliderange = $(this),
+                $range = $sliderange.find(".js-range-slider"),
+                $inputFrom = $sliderange.find(".js-input-from"),
+                $inputTo = $sliderange.find(".js-input-to"),
+                instance,
+                min = $sliderange.attr('data-min'),
+                max = $sliderange.attr('data-max'),
+                from = $sliderange.attr('data-min'),
+                to = $sliderange.attr('data-max');
+            console.log($sliderange);
 
-    $('.sliderange').each(function () {
-        var $sliderange = $(this),
-            $range = $sliderange.find(".js-range-slider"),
-            $inputFrom = $sliderange.find(".js-input-from"),
-            $inputTo = $sliderange.find(".js-input-to"),
-            instance,
-            min = $sliderange.attr('data-min'),
-            max = $sliderange.attr('data-max'),
-            from = $sliderange.attr('data-min'),
-            to = $sliderange.attr('data-max');
-        console.log($sliderange);
-
-        $range.ionRangeSlider({
-            skin: "round",
-            type: "double",
-            min: min,
-            max: max,
-            from: from,
-            to: to,
-            onStart: updateInputs,
-            onChange: updateInputs
-        });
-        instance = $range.data("ionRangeSlider");
-        function updateInputs(data) {
-            from = data.from;
-            to = data.to;
-            $inputFrom.prop("value", from);
-            $inputTo.prop("value", to);
-        }
-
-        $inputFrom.on("input", function () {
-            var val = $(this).prop("value");
-            if (val < min) {
-                val = min;
-            } else if (val > to) {
-                val = to;
+            $range.ionRangeSlider({
+                skin: "round",
+                type: "double",
+                min: min,
+                max: max,
+                from: from,
+                to: to,
+                onStart: updateInputs,
+                onChange: updateInputs
+            });
+            instance = $range.data("ionRangeSlider");
+            function updateInputs(data) {
+                from = data.from;
+                to = data.to;
+                $inputFrom.prop("value", from);
+                $inputTo.prop("value", to);
             }
-            instance.update({
-                from: val
+
+            $inputFrom.on("input", function () {
+                var val = $(this).prop("value");
+                if (val < min) {
+                    val = min;
+                } else if (val > to) {
+                    val = to;
+                }
+                instance.update({
+                    from: val
+                });
+            });
+
+            $inputTo.on("input", function () {
+                var val = $(this).prop("value");
+                if (val < from) {
+                    val = from;
+                } else if (val > max) {
+                    val = max;
+                }
+                instance.update({
+                    to: val
+                });
             });
         });
-
-        $inputTo.on("input", function () {
-            var val = $(this).prop("value");
-            if (val < from) {
-                val = from;
-            } else if (val > max) {
-                val = max;
-            }
-            instance.update({
-                to: val
-            });
-        });
-    });
+    }
 
 
     // Plyr.js 

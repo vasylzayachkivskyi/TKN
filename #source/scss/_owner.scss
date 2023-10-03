@@ -579,6 +579,7 @@
             transition: .4s;
             transform-origin: center;
         }
+
         &:before {
             transform: translate(-50%, -50%) rotate(-90deg);
         }
@@ -611,6 +612,12 @@
     background: rgba(33, 33, 33, 0.25);
     transition: .3s ease-in-out;
     z-index: 90;
+
+    &.popup-call {
+        .form-btn {
+            margin: 8px 0 0 auto;
+        }
+    }
 
     &::-webkit-scrollbar {
         width: 0px;
@@ -658,7 +665,20 @@
     }
 
     .popup__close {
-        display: none;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
@@ -718,7 +738,7 @@
         margin-top: 32px;
         position: relative;
 
-        &.has-dropdown{
+        &.has-dropdown {
             cursor: pointer;
         }
 
@@ -771,7 +791,7 @@
         }
 
         &.price,
-        &.area{
+        &.area {
             &:after {
                 content: '';
                 position: absolute;
@@ -783,6 +803,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
             }
+        }
+
+        &.text {
+            width: 100%;
         }
 
         &.price {
@@ -814,6 +838,50 @@
             margin-bottom: 4px;
         }
 
+        textarea {
+            resize: none;
+            height: 110px;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(209, 209, 209, 0.8);
+            color: rgba(209, 209, 209, 0.8);
+            font-family: Mont;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.1px;
+            padding: 9px 16px;
+            background: transparent;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            outline: none;
+
+            &::placeholder {
+                color: rgba(209, 209, 209, 0.80);
+                transition: .3s;
+            }
+
+            &:hover {
+                border: 1px solid #fbfbfb;
+                color: #fbfbfb;
+
+                &::placeholder {
+                    color: #fbfbfb;
+                }
+            }
+
+            &:focus {
+                border: 1px solid #159E34;
+                box-shadow: 0px 0px 1px 0px #159E34;
+                color: #fbfbfb;
+
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+
         input[type=text] {
             width: 100%;
             border-radius: 100px;
@@ -838,6 +906,33 @@
                 opacity: 0;
             }
         }
+
+        input {
+            &::placeholder {
+                color: rgba(209, 209, 209, 0.80);
+                transition: .3s;
+            }
+
+            &:hover {
+                border: 1px solid #fbfbfb;
+                color: #fbfbfb;
+
+                &::placeholder {
+                    color: #fbfbfb;
+                }
+            }
+
+            &:focus {
+                border: 1px solid var(--Accent-darker-green, #159E34);
+                box-shadow: 0px 0px 1px 0px #159E34;
+                color: #fbfbfb;
+
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+
         &.phone-field {
             cursor: pointer;
 
@@ -1113,19 +1208,15 @@
 }
 
 @media(max-width: 767.8px) {
+    .popup__body .popup__close {
+        top: 0;
+        right: 0;
+    }
+
     .popup__window {
         background: #050505;
     }
-    .popup__body .popup__close{
-        display: block;
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        img{
-            width: 24px;
-            height: 24px;
-        }
-    }
+
     .popup__body .popup-frame {
         display: none;
     }
@@ -1137,6 +1228,7 @@
 
     .popup__body {
         padding: 75px 10px 45px;
+        box-shadow: none;
     }
 
     .popup__head {

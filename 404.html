@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKN</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/rangeSlider.min.css">
+    <link rel="stylesheet" href="css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="pagewrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img src="img/svg/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <div class="header__nav-wrapper container">
+                            <ul class="header__menu">
+                                <li>
+                                    <a href="#">Купити</a>
+                                </li>
+                                <li>
+                                    <a href="#">Орендувати</a>
+                                </li>
+                                <li>
+                                    <a href="owner.html">Власникам</a>
+                                </li>
+                                <li>
+                                    <a href="career.html">Вакансії</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">Про Нас</a>
+                                </li>
+                            </ul>
+                            <div class="header__lang">
+                                <p>
+                                    UA
+                                </p>
+                                <ul>
+                                    <li class="active">
+                                        <a href="#">Українська - UA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">English - ENG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__lang-mobile">
+                                <p>
+                                    UA
+                                </p>
+                                <ul>
+                                    <li class="active">
+                                        <a href="#">Українська - UA</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">English - ENG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="header__btn popup__btn" data-popup="popup-call">
+                                Замовити дзвінок
+                            </a>
+                        </div>
+                    </nav>
+                    <button class="burger">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="errorpage">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-10">
+                            <div class="errorpage__inner">
+                                <div class="errorpage__bg">
+                                    <img src="img/svg/error_page_bg.svg" alt="404">
+                                </div>
+                                <div class="errorpage__content">
+                                    <p>
+                                        На жаль, сторінку, яку ви намагалися знайти, не знайдено. Будь ласка, перейдіть
+                                        на нашу
+                                        головну сторінку та використовуйте навігацію, щоб знайти потрібну інформацію.
+                                        Дякуємо за
+                                        ваше розуміння.
+                                    </p>
+                                </div>
+                                <div class="errorpage__buttons">
+                                    <a href="index.html" class="blackbtn">
+                                        На головну
+                                    </a>
+                                    <a href="#" class="whitebtn" onclick="window.history.back();">
+                                        Назад
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- popup "Замовити дзвінок"-->
+        <div class="popup__window popup-call">
+            <div class="container">
+                <div class="popup__wrapper">
+                    <div class="popup__body">
+                        <div class="popup__close">
+                            <img src="img/svg/close.svg" alt="close">
+                        </div>
+                        <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                        <div class="popup__head">
+                            <h2>
+                                Замовити зворотній зв’язок
+                            </h2>
+                            <p>
+                                Заповніть форму і ми зателефонуємо до вас протягом робочого дня.
+                            </p>
+                        </div>
+                        <div class="popup__content">
+                            <form>
+                                <label class="inputfield">
+                                    <p>
+                                        Ім’я
+                                    </p>
+                                    <input type="text" placeholder="Як до вас звертатись?">
+                                </label>
+                                <label class="inputfield phone-field">
+                                    <p>
+                                        Номер телефону
+                                    </p>
+                                    <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                    <input type="text" value="+380">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">+359</span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Austria
+                                            </p>
+                                            <span class="code">+43</span>
+                                            <img src="img/svg/flag-Austria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">
+                                                +359
+                                            </span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                    </ul>
+                                </label>
+                                <div class="inputfield text">
+                                    <p>
+                                        Коментарій
+                                    </p>
+                                    <textarea placeholder="Введіть свою відповідь"></textarea>
+                                </div>
+                                <!-- <button class="form-btn greenbtn sendbtn">
+                                            Відправити заявку
+                                        </button> -->
+                                <span class="form-btn greenbtn sendbtn">
+                                    Відправити заявку
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col">
+                        <ul>
+                            <li class="title">
+                                <h5>
+                                    Меню
+                                </h5>
+                            </li>
+                            <li><a href="#">Купити</a></li>
+                            <li><a href="#">Орендувати</a></li>
+                            <li><a href="owner.html">Власникам</a></li>
+                            <li><a href="#">Команда</a></li>
+                            <li><a href="#">Вакансії</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <ul>
+                            <li class="title">
+                                <h5>
+                                    Ми в соцмережах
+                                </h5>
+                            </li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <ul>
+                            <li class="title">
+                                <h5>
+                                    Гаряча лінія
+                                </h5>
+                            </li>
+                            <li>
+                                <a href="tel:+380 (93) 854 21 22">+380 (93) 854 21 22</a>
+                            </li>
+                            <li>
+                                <p>
+                                    Будемо раді проконсультувати вас в особистій розмові по телефону. Ви можете
+                                    зв'язатися з нами з понеділка по п'ятницю з 9:00 до 18:00, сб. з 10:00 до 16:00.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <ul>
+                            <li class="title">
+                                <h5>
+                                    Адреса
+                                </h5>
+                            </li>
+                            <li>
+                                <a href="tel:+380 (93) 854 21 22">м. Київ, вул. Сім'ї Прахових, 58/10 БЦ Європасаж</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <div class="google__analytics">
+                            <div class="google__analytics-row">
+                                <img src="img/svg/star.svg" alt="star">
+                                <img src="img/svg/star.svg" alt="star">
+                                <img src="img/svg/star.svg" alt="star">
+                                <img src="img/svg/star.svg" alt="star">
+                                <img src="img/svg/star_half.svg" alt="star">
+                            </div>
+                            <div class="info">
+                                <p>Оцінка у Google</p><span>4.6/5</span>
+                                <a href="#">12 відгуків</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <img src="img/svg/footer_logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="footer__bottom">
+                    <a href="privacy.html">
+                        Політика конфіденційності
+                    </a>
+                    <p>
+                        © 2023 ТКН Консалтинг - Всі права захищені
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/rangeSlider.min.js"></script>
+    <script src="js/lib/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
