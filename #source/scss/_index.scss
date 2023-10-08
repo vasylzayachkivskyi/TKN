@@ -189,6 +189,7 @@
             margin-bottom: 16px;
         }
 
+        .year-field,
         .budget-field,
         .area-field {
             position: relative;
@@ -212,6 +213,9 @@
             }
         }
 
+        .year-field:after {
+            content: 'Років';
+        }
         .budget-field:after {
             content: '$';
         }

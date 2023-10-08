@@ -25,15 +25,17 @@ $(document).ready(function () {
     var windowWidth = $(document).width(),
         containerWidth = $('.container').width(),
         paddingContainer = ((windowWidth - containerWidth) / 2);
-    $('.padleft').css('margin-left', paddingContainer);
-    $('.padright').css('margin-right', paddingContainer);
+    $('.margleft').css('margin-left', paddingContainer);
+    $('.margright').css('margin-right', paddingContainer);
+    $('.padright').css('padding-right', paddingContainer);
 
     $(window).resize(function () {
         var windowWidth = $(document).width(),
             containerWidth = $('.container').width(),
             paddingContainer = ((windowWidth - containerWidth) / 2);
-        $('.padleft').css('margin-left', paddingContainer);
-        $('.padright').css('margin-right', paddingContainer);
+        $('.margleft').css('margin-left', paddingContainer);
+        $('.margright').css('margin-right', paddingContainer);
+        $('.padright').css('padding-right', paddingContainer);
     });
 
     // PROPOSITION SLIDER ----- //
@@ -350,6 +352,76 @@ $(document).ready(function () {
         }
     });
 
+    // estate card slider -------------------------------------- //
+    var swiper = new Swiper(".estcard__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        keyboard: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+
+            768: {
+                slidesPerView: "auto",
+            },
+        },
+    });
+
+    // more/less text
+    $('.more-btn').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).closest('.estcard__box').find('.estcard__box-moretext').slideToggle('active');
+    });
+    
+    //  gallery ----------- //
+    $('[data-fancybox^="images"]').each(function () {
+        var galleryType = $(this).data('fancybox');
+
+        $(`[data-fancybox="${galleryType}"]`).fancybox({
+            thumbs: {
+                autoStart: true
+            },
+        });
+    });
+
+    // estate-tab
+    $('.estate-tab').on('click', function(){
+        $('.estate-tab').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // estate__objects-sort
+    $('.estate__objects-sort span').on('click', function() {
+        $(this).closest('.estate__objects-sort').find('ul').slideToggle();
+    });
+
+    $('.estate__objects-sort li').on('click', function() {
+        var valueText = $(this).text();
+        $('.estate__objects-sort li').removeClass('active');
+        $('.estate__objects-sort').find('ul').slideUp();
+        $(this).addClass('active');
+        $('.estate__objects-sort span').text(valueText);
+    });
+
+    // estate__objects-button (change width objects block)------------- //
+    $('.estate__objects-button').on('click', function() {
+        $('.estate__inner').toggleClass('active-objects');
+    });
+
+        // estate__map-button (change width objects block)------------- //
+        $('.estate__map-btn').on('click', function() {
+            $(this).toggleClass('active');
+            $('.estate__inner').toggleClass('active-map');
+        });
 
 
 
