@@ -85,128 +85,288 @@
                 <div class="estate__head">
                     <div class="container">
                         <div class="estate__filter">
-                            <div class="estate__filter-tabs">
-                                <a href="#" class="active estate-tab">Продаж</a>
-                                <a href="#" class=" estate-tab">Оренда</a>
-                            </div>
-                            <div class="inputfield">
-                                <div class="has-dropdown">
-                                    <input type="text" placeholder="Місто" readonly>
+                            <div class="estate__filter-left">
+                                <div class="estate__filter-tabs">
+                                    <a href="#" class="active estate-tab">Продаж</a>
+                                    <a href="#" class=" estate-tab">Оренда</a>
                                 </div>
-                                <div class="dropdown-box">
-                                    <div classs="check-list">
-                                        <label class="checkfield">
-                                            <input type="checkbox">
-                                            <span>Київ</span>
-                                        </label>
-                                        <label class="checkfield">
-                                            <input type="checkbox">
-                                            <span>Київська область</span>
-                                        </label>
+                            </div>
+                            <div class="estate__filter-right">
+                                <div class="inputfield">
+                                    <div class="has-dropdown">
+                                        <input type="text" placeholder="Місто" readonly>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="inputfield">
-                                <div class="has-dropdown">
-                                    <input type="text" placeholder="Тип" readonly>
-                                </div>
-                                <div class="dropdown-box">
-                                    <div classs="check-list">
-                                        <label class="checkfield">
-                                            <input type="checkbox">
-                                            <span>Торгівельна</span>
-                                        </label>
-                                        <label class="checkfield">
-                                            <input type="checkbox">
-                                            <span>Інша</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="inputfield">
-                                <div class="has-dropdown">
-                                    <input type="text" placeholder="Вартість" readonly>
-                                </div>
-                                <div class="dropdown-box" data-symbol="$">
-                                    <div class="dropdown-row">
-                                        <div class="sliderange" data-min="0" data-max="25000">
-                                            <div class="extra-controls">
-                                                <div class="budget-field">
-                                                    <input type="text" class="js-input-from area" value="">
-                                                </div>
-                                                <div class="budget-field">
-                                                    <input type="text" class="js-input-to area" value="">
-                                                </div>
-                                            </div>
-                                            <div class="range-slider">
-                                                <input type="text" class="js-range-slider" value="">
-                                            </div>
+                                    <div class="dropdown-box">
+                                        <div classs="check-list">
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Київ</span>
+                                            </label>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Київська область</span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="dropdown-row">
-                                        <span class="blackbtn dropdown-btn">
-                                            Застосувати
-                                        </span>
+                                </div>
+                                <div class="inputfield">
+                                    <div class="has-dropdown">
+                                        <input type="text" placeholder="Тип" readonly>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="inputfield">
-                                <div class="has-dropdown">
-                                    <input type="text" placeholder="Площа" readonly>
-                                </div>
-                                <div class="dropdown-box" data-symbol="м²">
-                                    <div class="dropdown-row">
-                                        <div class="sliderange" data-min="0" data-max="250">
-                                            <div class="extra-controls">
-                                                <div class="area-field">
-                                                    <input type="text" class="js-input-from area" value="">
-                                                </div>
-                                                <div class="area-field">
-                                                    <input type="text" class="js-input-to area" value="">
-                                                </div>
-                                            </div>
-                                            <div class="range-slider">
-                                                <input type="text" class="js-range-slider" value="">
-                                            </div>
+                                    <div class="dropdown-box">
+                                        <div classs="check-list">
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Торгівельна</span>
+                                            </label>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Інша</span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="dropdown-row">
-                                        <span class="blackbtn dropdown-btn">
-                                            Застосувати
-                                        </span>
+                                </div>
+                                <div class="inputfield">
+                                    <div class="has-dropdown">
+                                        <input type="text" placeholder="Вартість" readonly>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="inputfield">
-                                <div class="has-dropdown">
-                                    <input type="text" placeholder="Окупність" readonly>
-                                </div>
-                                <div class="dropdown-box" data-symbol="$">
-                                    <div class="dropdown-row">
-                                        <div class="sliderange" data-min="0" data-max="20">
-                                            <div class="extra-controls">
-                                                <div class="year-field">
-                                                    <input type="text" class="js-input-from area" value="">
+                                    <div class="dropdown-box" data-symbol="$">
+                                        <div class="dropdown-row">
+                                            <div class="sliderange" data-min="0" data-max="25000">
+                                                <div class="extra-controls">
+                                                    <div class="budget-field">
+                                                        <input type="text" class="js-input-from area" value="">
+                                                    </div>
+                                                    <div class="budget-field">
+                                                        <input type="text" class="js-input-to area" value="">
+                                                    </div>
                                                 </div>
-                                                <div class="year-field">
-                                                    <input type="text" class="js-input-to area" value="">
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" value="">
                                                 </div>
-                                            </div>
-                                            <div class="range-slider">
-                                                <input type="text" class="js-range-slider" value="">
                                             </div>
                                         </div>
+                                        <div class="dropdown-row">
+                                            <span class="blackbtn dropdown-btn">
+                                                Застосувати
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="dropdown-row">
-                                        <span class="blackbtn dropdown-btn">
+                                </div>
+                                <div class="inputfield">
+                                    <div class="has-dropdown">
+                                        <input type="text" placeholder="Площа" readonly>
+                                    </div>
+                                    <div class="dropdown-box" data-symbol="м²">
+                                        <div class="dropdown-row">
+                                            <div class="sliderange" data-min="0" data-max="250">
+                                                <div class="extra-controls">
+                                                    <div class="area-field">
+                                                        <input type="text" class="js-input-from area" value="">
+                                                    </div>
+                                                    <div class="area-field">
+                                                        <input type="text" class="js-input-to area" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-row">
+                                            <span class="blackbtn dropdown-btn">
+                                                Застосувати
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inputfield">
+                                    <div class="has-dropdown">
+                                        <input type="text" placeholder="Окупність" readonly>
+                                    </div>
+                                    <div class="dropdown-box" data-symbol="$">
+                                        <div class="dropdown-row">
+                                            <div class="sliderange" data-min="0" data-max="20">
+                                                <div class="extra-controls">
+                                                    <div class="year-field">
+                                                        <input type="text" class="js-input-from area" value="">
+                                                    </div>
+                                                    <div class="year-field">
+                                                        <input type="text" class="js-input-to area" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-row">
+                                            <span class="blackbtn dropdown-btn">
+                                                Застосувати
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="clearbtn">
+                                    Очистити фільтр
+                                </button>
+                            </div>
+                        </div>
+                        <div class="estate__mobile">
+                            <div class="estate__mobile-type">
+                                <p>
+                                    Продаж
+                                </p>
+                                <div class="type-dropdown">
+                                    <div class="type-dropdown__head">
+                                        <h4>
+                                            Тип операції
+                                        </h4>
+                                        <img src="img/svg/close-black.svg" alt="close" class="close-btn">
+                                    </div>
+                                    <ul class="type-dropdown__list">
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="type" value="Продаж">
+                                                <span>Продаж</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="type" value="Оренда">
+                                                <span>Оренда</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="type-dropdown__bottom">
+                                        <button class="blackbtn typebtn">
                                             Застосувати
-                                        </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <button class="clearbtn">
-                                Очистити фільтр
-                            </button>
+                            <div class="estate__mobile-filter">
+                                <p>
+                                    Фільтри
+                                    <span>3</span>
+                                </p>
+                                <div class="filter-dropdown">
+                                    <div class="filter-dropdown__head">
+                                        <h4>
+                                            Фільтр
+                                        </h4>
+                                        <img src="img/svg/close-black.svg" alt="close" class="close-btn">
+                                    </div>
+                                    <div class="filter-dropdown__list">
+                                        <div class="dropdown-row">
+                                            <span>
+                                                Місто
+                                            </span>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Київ</span>
+                                            </label>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Київська область</span>
+                                            </label>
+                                        </div>
+                                        <div class="dropdown-row">
+                                            <span>
+                                                Тип нерухомості
+                                            </span>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Торгівельна</span>
+                                            </label>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Інша</span>
+                                            </label>
+                                        </div>
+                                        <div class="dropdown-box" data-symbol="$">
+                                            <span>
+                                                Вартість
+                                            </span>
+                                            <div class="dropdown-row">
+                                                <div class="sliderange" data-min="0" data-max="25000">
+                                                    <div class="extra-controls">
+                                                        <div class="budget-field">
+                                                            <input type="text" class="js-input-from area" value="">
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                                                            <path d="M1 1H9" stroke="#D1D1D1" stroke-linecap="round"/>
+                                                        </svg>
+                                                        <div class="budget-field">
+                                                            <input type="text" class="js-input-to area" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range-slider">
+                                                        <input type="text" class="js-range-slider" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-box" data-symbol="м²">
+                                            <span>
+                                                Площа
+                                            </span>
+                                            <div class="dropdown-row">
+                                                <div class="sliderange" data-min="0" data-max="250">
+                                                    <div class="extra-controls">
+                                                        <div class="area-field">
+                                                            <input type="text" class="js-input-from area" value="">
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                                                            <path d="M1 1H9" stroke="#D1D1D1" stroke-linecap="round"/>
+                                                        </svg>
+                                                        <div class="area-field">
+                                                            <input type="text" class="js-input-to area" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range-slider">
+                                                        <input type="text" class="js-range-slider" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-box" data-symbol="$">
+                                            <span>
+                                                Окупність
+                                            </span>
+                                            <div class="dropdown-row">
+                                                <div class="sliderange" data-min="0" data-max="20">
+                                                    <div class="extra-controls">
+                                                        <div class="year-field">
+                                                            <input type="text" class="js-input-from area" value="">
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                                                            <path d="M1 1H9" stroke="#D1D1D1" stroke-linecap="round"/>
+                                                        </svg>
+                                                        <div class="year-field">
+                                                            <input type="text" class="js-input-to area" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="range-slider">
+                                                        <input type="text" class="js-range-slider" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="filter-dropdown__bottom">
+                                        <button class="whitebtn clearbtn">
+                                            Очистити все
+                                        </button>
+                                        <button class="blackbtn filtrbtn">
+                                            Застосувати
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -816,7 +976,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="pagination">
                                 <ul>

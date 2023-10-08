@@ -381,7 +381,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this).closest('.estcard__box').find('.estcard__box-moretext').slideToggle('active');
     });
-    
+
     //  gallery ----------- //
     $('[data-fancybox^="images"]').each(function () {
         var galleryType = $(this).data('fancybox');
@@ -394,17 +394,17 @@ $(document).ready(function () {
     });
 
     // estate-tab
-    $('.estate-tab').on('click', function(){
+    $('.estate-tab').on('click', function () {
         $('.estate-tab').removeClass('active');
         $(this).addClass('active');
     });
 
     // estate__objects-sort
-    $('.estate__objects-sort span').on('click', function() {
+    $('.estate__objects-sort span').on('click', function () {
         $(this).closest('.estate__objects-sort').find('ul').slideToggle();
     });
 
-    $('.estate__objects-sort li').on('click', function() {
+    $('.estate__objects-sort li').on('click', function () {
         var valueText = $(this).text();
         $('.estate__objects-sort li').removeClass('active');
         $('.estate__objects-sort').find('ul').slideUp();
@@ -413,14 +413,35 @@ $(document).ready(function () {
     });
 
     // estate__objects-button (change width objects block)------------- //
-    $('.estate__objects-button').on('click', function() {
+    $('.estate__objects-button').on('click', function () {
         $('.estate__inner').toggleClass('active-objects');
     });
 
-        // estate__map-button (change width objects block)------------- //
-        $('.estate__map-btn').on('click', function() {
-            $(this).toggleClass('active');
-            $('.estate__inner').toggleClass('active-map');
+    // estate__map-button (change width objects block)------------- //
+    $('.estate__map-btn').on('click', function () {
+        $(this).toggleClass('active');
+        $('.estate__inner').toggleClass('active-map');
+    });
+
+
+    // open/close type objects dropdown------------- //
+    $('.estate__mobile-type p').on('click', function () {
+        $('.type-dropdown').addClass('active');
+    });
+    $('.estate__mobile-type .close-btn, .typebtn').on('click', function () {
+        $('.type-dropdown').removeClass('active');
+    });
+    $('.type-dropdown__list input').on('click', function () {
+        var valueInput = $(this).val();
+        $(this).closest('.estate__mobile-type').find('p').text(valueInput);
+    });
+
+        // open/close filter objects dropdown------------- //
+        $('.estate__mobile-filter p').on('click', function () {
+            $('.filter-dropdown').addClass('active');
+        });
+        $('.estate__mobile-filter .close-btn, .filtrbtn').on('click', function () {
+            $('.filter-dropdown').removeClass('active');
         });
 
 
