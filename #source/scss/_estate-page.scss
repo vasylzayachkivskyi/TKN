@@ -107,7 +107,7 @@
             }
         }
 
-        &.cities {
+        &.grey-field {
             .close {
                 position: absolute;
                 top: 50%;
@@ -131,7 +131,7 @@
                     content: '';
                     display: block;
                     position: absolute;
-                    background-image: url(/img/svg/done_icon.svg);
+                    background-image: url(../img/svg/done_icon.svg);
                     width: 18px;
                     height: 18px;
                     top: 50%;
@@ -260,7 +260,7 @@
 }
 
 .estate__inner {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 161px);
     min-height: 700px;
     display: flex;
     position: relative;
@@ -341,9 +341,7 @@
 .estate__objects {
     height: 100%;
     width: 45%;
-    position: relative;
     transition: .3s;
-    padding-bottom: 10px;
     padding-left: 26px;
     padding-right: 16px;
     position: relative;
@@ -363,6 +361,7 @@
         width: 100%;
 
         .estate__objects-button {
+            left: -7px;
             img {
                 transform: rotate(180deg);
             }
@@ -417,14 +416,14 @@
         transform: translateY(-50%);
         height: 100%;
         background-size: cover;
-        width: 57px;
+        width: 45px;
         z-index: 2;
     }
 }
 
 .estate__objects-button {
     position: absolute;
-    top: 390px;
+    top: 44%;
     left: 15px;
     z-index: 999;
     cursor: pointer;
@@ -448,7 +447,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0 17px;
+    padding: 25px 20px 17px 0;
 
     p {
         color: rgba(60, 60, 60, 0.70);
@@ -503,7 +502,7 @@
         position: absolute;
         z-index: 25;
         top: calc(100% + 2px);
-        left: 0;
+        right: 0;
         display: none;
         padding: 8px;
 
@@ -549,7 +548,7 @@
 .estate__objects-inner {
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100% - 59px);
+    height: 100%;
 
     &::-webkit-scrollbar {
         width: 4px;
@@ -662,7 +661,7 @@
         border: 2px solid transparent;
 
         &:before {
-            width: 101%;
+            width: calc(100% + 4px);
         }
 
         &:hover {
@@ -687,6 +686,13 @@
 
     .proposition__slide-info {
         width: 100%;
+    }
+}
+
+.estate-formsect {
+    .selection__left{
+        max-width: 700px;
+        margin: 0 auto;
     }
 }
 
@@ -985,6 +991,9 @@
 }
 
 @media (max-width:991.8px) {
+    .estate__inner {
+        height: calc(100vh - 143px);
+    }
     .estate__inner.active-objects .estate__objects .estate__objects-wrapper {
         gap: 10px;
     }
@@ -1419,7 +1428,9 @@
 }
 
 @media (max-width: 575.8px) {
-
+    .estate__inner {
+        height: calc(100vh - 105px);
+    }
     .estate__objects-inner {
         overflow-y: auto;
         overflow-x: hidden;

@@ -375,6 +375,9 @@
     .descr {
         display: none;
         padding: 16px 0 40px;
+        ol{
+            padding-left: 25px;
+        }
 
         li,
         p {

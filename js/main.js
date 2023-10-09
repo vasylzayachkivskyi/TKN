@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     // CHANGE HEADER WITH SCROLL --------------------------- //
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 40) {
+        if ($(this).scrollTop() > 0) {
             $('.header').addClass('change-bg');
         } else {
             $('.header').removeClass('change-bg');
@@ -118,6 +118,9 @@ $(document).ready(function () {
 
     // DROPDOWN MENU ------------ //
     $('.has-dropdown').on('click', function () {
+        var dropdownBox = $(this).next('.dropdown-box');
+        $('.dropdown-box').not(dropdownBox).slideUp();
+        $('.has-dropdown').not(this).removeClass('active');
         $(this).toggleClass('active');
         $(this).next('.dropdown-box').slideToggle();
     });
@@ -473,44 +476,58 @@ $(document).ready(function () {
     });
 
 
-    // checked cities ------------- //
+    // checked grey-field ------------- //
 
-    $('.inputfield.cities .checkfield input[type="checkbox"]').change(function () {
-        var selectedCities = [];
-        $('.inputfield.cities .checkfield input[type="checkbox"]:checked').each(function () {
-            selectedCities.push($(this).siblings('span').text());
+    $('.inputfield.grey-field').each(function () {
+        var $this = $(this);
+        var inputField = $this.find('.has-dropdown input[type="text"]');
+        var closeButton;
+    
+        $this.find('.checkfield input[type="checkbox"]').change(function () {
+            var selectedField = [];
+            $this.find('.checkfield input[type="checkbox"]:checked').each(function () {
+                selectedField.push($(this).siblings('span').text());
+            });
+    
+            if (selectedField.length > 0) {
+                var maxLength = 8;
+                var text = selectedField.join(', ');
+                if (text.length > maxLength) {
+                    text = text.substring(0, maxLength) + '...';
+                }
+                inputField.val(text);
+                $this.addClass('active');
+    
+                
+                if (!closeButton) {
+                    closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
+                    closeButton.click(function () {
+                        inputField.val('');
+                        closeButton.remove();
+                        closeButton = null; 
+                        $this.removeClass('active');
+                        $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
+                    });
+                    $this.prepend(closeButton);
+                }
+            } else {
+                inputField.val('');
+                
+                if (closeButton) {
+                    closeButton.remove();
+                    closeButton = null; 
+                }
+                
+                $this.removeClass('active');
+                $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
+            }
         });
-
-        var inputField = $('.inputfield.cities .has-dropdown input[type="text"]');
-        var closeButton = $('.inputfield.cities .close');
-
-        if (selectedCities.length > 0) {
-            var maxLength = 8;
-            var text = selectedCities.join(', ');
-            if (text.length > maxLength) {
-                text = text.substring(0, maxLength) + '...';
-            }
-            inputField.val(text);
-            $('.inputfield.cities').addClass('active');
-
-            // Додавання елементу close, якщо він не існує
-            if (closeButton.length === 0) {
-                closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
-                closeButton.click(function () {
-                    inputField.val('');
-                    $(this).remove();
-                    $('.inputfield.cities').removeClass('active');
-                    $('.inputfield.cities .checkfield input[type="checkbox"]').prop('checked', false);
-                });
-                $('.inputfield.cities').prepend(closeButton);
-            }
-        } else {
-            inputField.val('');
-            closeButton.remove();
-            $('.inputfield.cities').removeClass('active');
-            $('.inputfield.cities .checkfield input[type="checkbox"]').prop('checked', false);
-        }
     });
+    
+    
+    
+    
+    
 
 
 
