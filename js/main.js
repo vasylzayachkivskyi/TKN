@@ -28,6 +28,7 @@ $(document).ready(function () {
     $('.margleft').css('margin-left', paddingContainer);
     $('.margright').css('margin-right', paddingContainer);
     $('.padright').css('padding-right', paddingContainer);
+    $('.padleft').css('padding-left', paddingContainer);
 
     $(window).resize(function () {
         var windowWidth = $(document).width(),
@@ -36,6 +37,7 @@ $(document).ready(function () {
         $('.margleft').css('margin-left', paddingContainer);
         $('.margright').css('margin-right', paddingContainer);
         $('.padright').css('padding-right', paddingContainer);
+        $('.padleft').css('padding-left', paddingContainer);
     });
 
     // PROPOSITION SLIDER ----- //
@@ -436,14 +438,79 @@ $(document).ready(function () {
         $(this).closest('.estate__mobile-type').find('p').text(valueInput);
     });
 
-        // open/close filter objects dropdown------------- //
-        $('.estate__mobile-filter p').on('click', function () {
-            $('.filter-dropdown').addClass('active');
-        });
-        $('.estate__mobile-filter .close-btn, .filtrbtn').on('click', function () {
-            $('.filter-dropdown').removeClass('active');
+    // open/close filter objects dropdown------------- //
+    $('.estate__mobile-filter p').on('click', function () {
+        $('.filter-dropdown').addClass('active');
+    });
+    $('.estate__mobile-filter .close-btn, .filtrbtn').on('click', function () {
+        $('.filter-dropdown').removeClass('active');
+    });
+
+
+    // change map/list on mobile ------------- //
+    $('.obj-list').on('click', function () {
+        $('.estate__inner').addClass('active-objects');
+        $('.estate__inner').removeClass('active-map');
+    });
+    $('.obj-map').on('click', function () {
+        $('.estate__inner').removeClass('active-objects');
+        $('.estate__inner').addClass('active-map');
+    });
+
+    // open/close sort obj ------------- //
+    $('.obj-sort').on('click', function () {
+        $('.mobile-sort-dropdown').addClass('active');
+    });
+    $('.mobile-sort-dropdown li, .close-sort').on('click', function () {
+        $('.mobile-sort-dropdown').removeClass('active');
+    });
+
+    $('.mobile-sort-dropdown li').on('click', function () {
+        var valueText =  $(this).data('info')
+        $('.mobile-sort-dropdown li').removeClass('active');
+        $(this).addClass('active');
+        $('.estate__mobile-sort p').text(valueText);
+    });
+
+
+    // checked cities ------------- //
+
+    $('.inputfield.cities .checkfield input[type="checkbox"]').change(function () {
+        var selectedCities = [];
+        $('.inputfield.cities .checkfield input[type="checkbox"]:checked').each(function () {
+            selectedCities.push($(this).siblings('span').text());
         });
 
+        var inputField = $('.inputfield.cities .has-dropdown input[type="text"]');
+        var closeButton = $('.inputfield.cities .close');
+
+        if (selectedCities.length > 0) {
+            var maxLength = 8;
+            var text = selectedCities.join(', ');
+            if (text.length > maxLength) {
+                text = text.substring(0, maxLength) + '...';
+            }
+            inputField.val(text);
+            $('.inputfield.cities').addClass('active');
+
+            // Додавання елементу close, якщо він не існує
+            if (closeButton.length === 0) {
+                closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
+                closeButton.click(function () {
+                    inputField.val('');
+                    $(this).remove();
+                    $('.inputfield.cities').removeClass('active');
+                    $('.inputfield.cities .checkfield input[type="checkbox"]').prop('checked', false);
+                });
+                $('.inputfield.cities').prepend(closeButton);
+            }
+        } else {
+            inputField.val('');
+            closeButton.remove();
+            $('.inputfield.cities').removeClass('active');
+            $('.inputfield.cities .checkfield input[type="checkbox"]').prop('checked', false);
+        }
+    });
 
 
 
