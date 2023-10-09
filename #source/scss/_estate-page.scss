@@ -371,6 +371,9 @@
         .estate__objects-wrapper .proposition__slide {
             max-width: 24%;
         }
+        .estate__objects-wrapper {
+            gap: 15px;
+        }
     }
 
     .estate__objects-btnwrap:before {
@@ -982,6 +985,9 @@
 }
 
 @media (max-width:991.8px) {
+    .estate__inner.active-objects .estate__objects .estate__objects-wrapper {
+        gap: 10px;
+    }
     .estate__inner.active-objects .estate__objects .estate__objects-wrapper .proposition__slide {
         max-width: 49%;
     }
@@ -1395,14 +1401,7 @@
     .estate .selection .selection__right form {
         max-width: 100%;
     }
-}
-
-@media (max-width: 575.8px) {
-
     .estate__objects-inner {
-        overflow-y: auto;
-        overflow-x: hidden;
-        height: calc(100% - 90px);
 
         &::-webkit-scrollbar {
             width: 2px;
@@ -1416,7 +1415,15 @@
             background-color: transparent;
             border-radius: 20px;
         }
+    }
+}
 
+@media (max-width: 575.8px) {
+
+    .estate__objects-inner {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100% - 90px);
 
     }
 
