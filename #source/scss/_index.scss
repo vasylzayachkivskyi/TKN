@@ -24,8 +24,8 @@
 
 .heroscreen__video {
     position: absolute;
-    width: 1000px;
-    top: 8%;
+    width: 80%;
+    top: 15%;
     right: 0;
 }
 
@@ -1629,10 +1629,7 @@
         width: 750px;
     }
 
-    .heroscreen__video {
-        width: 800px;
-        top: 70px;
-    }
+
 
     .proposition {
         padding: 90px 0;
@@ -1691,10 +1688,6 @@
 }
 
 @media(max-width: 1199.8px) {
-    .heroscreen__video {
-        width: 650px;
-        top: 80px;
-    }
 
     .heroscreen__bg {
         top: 70px;
@@ -1792,9 +1785,7 @@
         margin: 0;
     }
 
-    .heroscreen__video {
-        width: 550px;
-    }
+
 
     .proposition {
         padding: 70px 0;
