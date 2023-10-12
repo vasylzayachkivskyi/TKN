@@ -804,7 +804,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 999;
         background: #F6F6F6;
         opacity: 0;
         transform: translateY(-100%);
@@ -1094,7 +1094,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 99;
+            z-index: 999;
             width: 100%;
             height: 100vh;
             background: #F6F6F6;
@@ -1216,7 +1216,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 99;
+            z-index: 999;
             width: 100%;
             height: 100vh;
             background: #F6F6F6;
@@ -1226,6 +1226,9 @@
             opacity: 0;
             transform: translateY(-100%);
             transition: .4s;
+            .checkfield {
+                margin-bottom: 16px;
+            }
 
             &.active {
                 opacity: 1;
