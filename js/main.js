@@ -328,6 +328,11 @@ $(document).ready(function () {
         parentBlock.find('.js-input-to').parent('.budget-field').removeClass('hover');
     });
 
+    // estate-tab
+    $('.estate-tab').on('click', function () {
+        $('.estate-tab').removeClass('active');
+        $(this).addClass('active');
+    });
 
     // Plyr.js 
     if ($('#video-player').length) {
@@ -557,8 +562,6 @@ $(document).ready(function () {
     
     
     
-
-
 
 });
 

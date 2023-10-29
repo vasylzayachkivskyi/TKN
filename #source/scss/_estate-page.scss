@@ -414,7 +414,6 @@
 
         .estate__objects-button {
             left: -7px;
-
             img {
                 transform: rotate(180deg);
             }
@@ -423,7 +422,6 @@
         .estate__objects-wrapper .proposition__slide {
             max-width: 24%;
         }
-
         .estate__objects-wrapper {
             gap: 15px;
         }
@@ -1282,7 +1280,6 @@
             opacity: 0;
             transform: translateY(-100%);
             transition: .4s;
-
             .checkfield {
                 margin-bottom: 16px;
             }
@@ -1470,7 +1467,6 @@
     .estate .selection .selection__right form {
         max-width: 100%;
     }
-
     .estate__objects-inner {
 
         &::-webkit-scrollbar {
@@ -1491,38 +1487,5 @@
 @media (max-width: 575.8px) {
     .estate__inner {
         height: calc(100vh - 105px);
-    }
-
-    .estate__objects-inner {
-        overflow-y: auto;
-        overflow-x: hidden;
-        height: calc(100% - 90px);
-
-    }
-
-    .estate {
-        padding-top: 50px;
-    }
-
-    .estate .selection .selection__left h2 {
-        font-size: 24px;
-    }
-
-    .estate .selection .selection__left p {
-        margin-bottom: 32px;
-        font-size: 12px;
-    }
-
-    .estate .selection {
-        padding: 64px 0 59px;
-        margin: 0px 0 0;
-    }
-
-    .estate__objects-wrapper .proposition__slide {
-        width: 100%;
-    }
-
-    .estate__inner.active-objects .estate__objects {
-        padding: 0 16px;
     }
 }
