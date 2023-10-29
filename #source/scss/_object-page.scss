@@ -73,7 +73,7 @@
 
 .hidden-fragment {
     position: relative;
-    color: transparent!important;
+    color: transparent !important;
     margin: 0 2px;
 
     &:after {
@@ -83,7 +83,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-image: url(../img/hidden-fragment.png);
+        background-image: url(../img/svg/hidden-fragment.svg);
     }
 }
 
@@ -810,9 +810,28 @@
 .estcard__box-parametres {
     ul {
         display: flex;
-        max-width: 550px;
         width: 100%;
         flex-wrap: wrap;
+
+        span {
+            display: block;
+            color: rgba(34, 35, 42, 0.60);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            margin-bottom: 4px;
+        }
+
+        p {
+            color: var(--Dark-Grey, #22232A);
+            display: block;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            letter-spacing: 0.15px;
+        }
     }
 
     li {
@@ -826,6 +845,10 @@
         padding-left: 36px;
         position: relative;
         margin-top: 25px;
+
+        &:nth-child(odd) {
+            padding-right: 20px;
+        }
 
         &:nth-child(1),
         &:nth-child(2) {
@@ -929,9 +952,11 @@
         margin-bottom: 0px;
         position: relative;
         margin-right: 24px;
+
         .error-text {
             display: none;
         }
+
         &.error {
             p {
                 color: #EF333D;
@@ -1044,7 +1069,7 @@
         height: 40px;
         border-radius: 100px;
         border: 1px solid rgba(209, 209, 209, 0.8);
-        color: rgba(209, 209, 209, 0.8);
+        color: #fbfbfb;
         font-family: Mont;
         font-size: 14px;
         font-style: normal;
@@ -1054,6 +1079,7 @@
         padding: 9px 16px;
         background: transparent;
     }
+
     input {
         &::placeholder {
             color: rgba(209, 209, 209, 0.80);
@@ -1158,6 +1184,10 @@
 .proposition.object-proposition {
     padding: 0 0 80px;
 
+    .proposition__slide-info {
+        height: 240px;
+    }
+
     .proposition__head {
         margin-bottom: 24px;
 
@@ -1169,7 +1199,7 @@
     }
 }
 
-.hidden-slide-img{
+.hidden-slide-img {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1179,8 +1209,11 @@
     z-index: 2;
     top: 0;
     left: 0;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
     background-image: url(../img/hidden-slide-img.png);
-    p{
+
+    p {
         color: var(--White, #FBFBFB);
         font-family: Mont;
         font-size: 12px;
@@ -1189,8 +1222,9 @@
         line-height: 120%;
     }
 }
-.hidden-slide{
-    .gallery-slider{
+
+.hidden-slide {
+    .gallery-slider {
         opacity: 0;
     }
 }
@@ -1390,6 +1424,16 @@
 }
 
 @media (max-width: 1199.8px) {
+    .estcard__box-parametres li {
+        &:nth-child(odd) {
+            width: 60%;
+        }
+
+        &:nth-child(even) {
+            width: 40%;
+        }
+    }
+
     .estcard__consultation-row {
         flex-wrap: wrap;
     }
@@ -1758,8 +1802,19 @@
     }
 
     .estcard__box-parametres li {
-        width: 100%;
+        width: 100%!important;
         margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin: 0 8px 0 0;
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
 
         &:nth-child(2) {
             margin-top: 20px;
