@@ -21,7 +21,7 @@
                 <div class="header__inner">
                     <div class="header__logo">
                         <a href="index.html">
-                            <img class="black-logo" src="img/svg/logo.svg" alt="logo">
+                            <img class="black-logo" src="img/header_logo.png" alt="logo">
                         </a>
                     </div>
                     <nav class="header__nav">
@@ -69,7 +69,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#" class="header__btn">
+                            <a href="#" class="header__btn popup__btn" data-popup="popup-call">
                                 Замовити дзвінок
                             </a>
                         </div>
@@ -227,14 +227,12 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="cp-feedback__video">
-                                <div class="plyr__video-embed" id="video-player" poster="img/cp_feedback_poster.png">
+                                <div class="plyr__video-embed" id="video-player" playsinline>
                                     <iframe
-                                      src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                      allowfullscreen
-                                      allowtransparency
-                                      allow="autoplay"
-                                    ></iframe>
-                                  </div>
+                                        src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                        allowfullscreen allowtransparency allow="autoplay"
+                                        poster="img/cp_feedback_poster.png"></iframe>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -257,7 +255,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="col-xl-6 xol-lg-7">
+                            <div class="col-xl-6 col-lg-7">
                                 <div class="cp-corporate__descr">
                                     <p>
                                         Корпоративний відпочинок є невід'ємною частиною нашої командної культури. Ми
@@ -273,19 +271,36 @@
                         </div>
                     </div>
                     <div class="cp-corporate__gallery">
-                        <div class="cp-corporate__img">
+                        <div class="cp-corporate__img narrow">
                             <img src="img/cp_corporate__img1.png" alt="img">
                         </div>
-                        <div class="cp-corporate__img">
+                        <div class="cp-corporate__img wide">
                             <img src="img/cp_corporate__img2.png" alt="img">
                         </div>
-                        <div class="cp-corporate__img">
+                        <div class="cp-corporate__img wide">
                             <img src="img/cp_corporate__img3.png" alt="img">
                         </div>
-                        <div class="cp-corporate__img">
+                        <div class="cp-corporate__img narrow">
                             <img src="img/cp_corporate__img4.png" alt="img">
                         </div>
-                        <div class="cp-corporate__img">
+                        <div class="cp-corporate__img wide">
+                            <img src="img/cp_corporate__img5.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="cp-corporate__gallery-mobile">
+                        <div class="cp-corporate__img wide">
+                            <img src="img/cp_corporate__img2.png" alt="img">
+                        </div>
+                        <div class="cp-corporate__img narrow">
+                            <img src="img/cp_corporate__img1.png" alt="img">
+                        </div>
+                        <div class="cp-corporate__img narrow">
+                            <img src="img/cp_corporate__img4.png" alt="img">
+                        </div>
+                        <div class="cp-corporate__img wide">
+                            <img src="img/cp_corporate__img3.png" alt="img">
+                        </div>
+                        <div class="cp-corporate__img wide">
                             <img src="img/cp_corporate__img5.png" alt="img">
                         </div>
                     </div>
@@ -448,11 +463,26 @@
                                                 Орієнтований на результат і досягнення цілей;
                                             </li>
                                             <li>
-                                                Амбітний та цілеспрямований;3. Вміє будувати сильні відносини з
-                                                клієнтами та знаходити індивідуальний підхід до кожного;4. Готовий вести
-                                                переговори щодо великих чеків і доводити угоду до завершення;5. Розуміє,
-                                                що найважливіше — це безпека наших клієнтів;6. Готовий до змін і
-                                                постійного самовдосконалення;7. Має підприємницький тип мислення.
+                                                Амбітний та цілеспрямований;
+                                            </li>
+                                            <li>
+                                                Вміє будувати сильні відносини з
+                                                клієнтами та знаходити індивідуальний підхід до кожного;
+                                            </li>
+                                            <li>
+                                                Готовий вести
+                                                переговори щодо великих чеків і доводити угоду до завершення;
+                                            </li>
+                                            <li>
+                                                Розуміє,
+                                                що найважливіше — це безпека наших клієнтів;
+                                            </li>
+                                            <li>
+                                                Готовий до змін і
+                                                постійного самовдосконалення;
+                                            </li>
+                                            <li>
+                                                Має підприємницький тип мислення.
                                             </li>
                                         </ol>
                                         <p>
@@ -471,7 +501,7 @@
                 <div class="container">
                     <div class="cp-form__inner">
                         <div class="row align-items-center justify-content-center">
-                            <div class="col-lg-6">
+                            <div class="col-xxl-6 col-xl-6 col-lg-5">
                                 <div class="selection__left">
                                     <h2>
                                         Зацікавились роботою у нас?
@@ -481,7 +511,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-xxl-4 col-xl-6 col-lg-7">
                                 <div class="selection__right">
                                     <form>
                                         <label class="inputfield text">
@@ -495,8 +525,15 @@
                                                 Номер телефону
                                             </p>
                                             <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
-                                            <input type="text" value="+380">
+                                            <input type="text" value="" placeholder="+380">
                                             <ul>
+                                                <li>
+                                                    <p>
+                                                        Ukraine
+                                                    </p>
+                                                    <span class="code">+380</span>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                                </li>
                                                 <li>
                                                     <p>
                                                         Bulgaria (Бьлгария)
@@ -615,25 +652,28 @@
                                             </p>
                                             <textarea placeholder="Введіть свою відповідь"></textarea>
                                         </div>
-                                        <label class="inputfield file">
+                                        <div class="inputfield file">
                                             <p>
-                                                Резюме 
+                                                Резюме
                                             </p>
-                                            <input type="file">
-                                            <div class="fake-input">
+                                            <input id="ff" type="file">
+                                            <label class="fake-input" for="ff">
                                                 <p>
                                                     <img src="img/svg/file_input_icon.svg" alt="file">
-                                                    Прикріпити резюме 
+                                                    Прикріпити резюме
                                                 </p>
                                                 <span>
                                                     (Підтримуючі файли pdf, doc, docx, png, img)
                                                 </span>
-                                            </div>
-                                        </label>
+                                            </label>
+                                        </div>
                                         <div class="inputrow">
-                                            <label class="checkfield long">
+                                            <label class="checkfield long error">
                                                 <input type="checkbox">
                                                 <span>Даю згоду на обробку персональних даних </span>
+                                                <p class="error-text">
+                                                    *Дайте згоду на обробку персональних даних
+                                                </p>
                                             </label>
                                         </div>
                                         <!-- <button class="formbtn greenbtn">
@@ -652,6 +692,109 @@
             </section>
 
         </main>
+
+                <!-- popup "Замовити дзвінок"-->
+                <div class="popup__window popup-call">
+                    <div class="container">
+                        <div class="popup__wrapper">
+                            <div class="popup__body">
+                                <div class="popup__close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </div>
+                                <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                                <div class="popup__head">
+                                    <h2>
+                                        Замовити зворотній зв’язок
+                                    </h2>
+                                    <p>
+                                        Заповніть форму і ми зателефонуємо до вас протягом робочого дня.
+                                    </p>
+                                </div>
+                                <div class="popup__content">
+                                    <form>
+                                        <label class="inputfield">
+                                            <p>
+                                                Ім’я
+                                            </p>
+                                            <input type="text" placeholder="Як до вас звертатись?">
+                                        </label>
+                                        <label class="inputfield phone-field">
+                                            <p>
+                                                Номер телефону
+                                            </p>
+                                            <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                            <input type="text" value="" placeholder="+380">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Ukraine
+                                                    </p>
+                                                    <span class="code">+380</span>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">+359</span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Austria
+                                                    </p>
+                                                    <span class="code">+43</span>
+                                                    <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">
+                                                        +359
+                                                    </span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                            </ul>
+                                        </label>
+                                        <div class="inputfield text">
+                                            <p>
+                                                Коментарій
+                                            </p>
+                                            <textarea placeholder="Введіть свою відповідь"></textarea>
+                                        </div>
+                                        <!-- <button class="form-btn greenbtn sendbtn">
+                                            Відправити заявку
+                                        </button> -->
+                                        <span class="form-btn greenbtn sendbtn">
+                                            Відправити заявку
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- popup -->
+        <div class="popup__window popup-not-supported">
+            <div class="container">
+                <div class="popup__wrapper">
+                    <div class="popup__body">
+                        <div class="popup__content">
+                            <p>
+                                Файл не підтримується. Файли, які підтримуються: pdf, doc, docx, png, img
+                            </p>
+                            <div class="popup__close">
+                                <span>
+                                    Закрити
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="container">
@@ -734,7 +877,7 @@
                     </a>
                 </div>
                 <div class="footer__bottom">
-                    <a href="#">
+                    <a href="privacy.html">
                         Політика конфіденційності
                     </a>
                     <p>
@@ -751,8 +894,4 @@
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="js/lib/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
-
-
 </body>
-
-</html>

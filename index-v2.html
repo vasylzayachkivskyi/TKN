@@ -20,8 +20,8 @@
                 <div class="header__inner">
                     <div class="header__logo">
                         <a href="index.html">
-                            <img class="black-logo" src="img/svg/logo.svg" alt="logo">
-                            <img class="white-logo" src="img/svg/footer_logo.svg" alt="logo">
+                            <img class="black-logo" src="img/header_logo.png" alt="logo">
+                            <img class="white-logo" src="img/header_logo_white.png" alt="logo">
                         </a>
                     </div>
                     <nav class="header__nav">
@@ -69,7 +69,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#" class="header__btn">
+                            <a href="#" class="header__btn popup__btn" data-popup="popup-call">
                                 Замовити дзвінок
                             </a>
                         </div>
@@ -83,10 +83,10 @@
 
         <main class="main">
 
-            <section class="heroscreen" style="background-color: #fff">
-                <video src="video/Main.mp4" autoplay loop class="heroscreen__video"></video>
+            <section class="heroscreen">
                 <div class="container">
                     <div class="heroscreen__inner">
+                        <video src="video/Main.mp4" autoplay muted loop class="heroscreen__video"></video>
                         <div class="row">
                             <div class="col-lg-6 col-md-7">
                                 <div class="heroscreen__title">
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="proposition__slider padleft swiper">
+                <div class="proposition__slider margleft swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="proposition__slide">
@@ -392,15 +392,6 @@
                                             </span>
                                         </li>
                                         <li>
-                                            <img src="img/svg/time_icon.svg" alt="icon">
-                                            <span>
-                                                Поточна окупність:
-                                            </span>
-                                            <span>
-                                                8,5 років
-                                            </span>
-                                        </li>
-                                        <li>
                                             <img src="img/svg/time-quarter-to_icon.svg" alt="icon">
                                             <span>
                                                 Потенційна окупність:
@@ -496,15 +487,6 @@
                                             </span>
                                         </li>
                                         <li>
-                                            <img src="img/svg/time-quarter-to_icon.svg" alt="icon">
-                                            <span>
-                                                Потенційна окупність:
-                                            </span>
-                                            <span>
-                                                7,5 років
-                                            </span>
-                                        </li>
-                                        <li>
                                             <img src="img/svg/user_icon.svg" alt="icon">
                                             <span>
                                                 З орендарем
@@ -582,24 +564,6 @@
                                             </span>
                                         </li>
                                         <li>
-                                            <img src="img/svg/time_icon.svg" alt="icon">
-                                            <span>
-                                                Поточна окупність:
-                                            </span>
-                                            <span>
-                                                8,5 років
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <img src="img/svg/time-quarter-to_icon.svg" alt="icon">
-                                            <span>
-                                                Потенційна окупність:
-                                            </span>
-                                            <span>
-                                                7,5 років
-                                            </span>
-                                        </li>
-                                        <li>
                                             <img src="img/svg/user_icon.svg" alt="icon">
                                             <span>
                                                 З орендарем
@@ -651,7 +615,7 @@
                                 <div class="proposition__slide-info">
                                     <div class="proposition__slide-head d-flex">
                                         <p>
-                                            Продаж
+                                            Оренда
                                         </p>
                                         <p>
                                             Торгівельна нерухомість
@@ -674,24 +638,6 @@
                                             </span>
                                             <span>
                                                 1 320 м<sup>2</sup>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <img src="img/svg/time_icon.svg" alt="icon">
-                                            <span>
-                                                Поточна окупність:
-                                            </span>
-                                            <span>
-                                                8,5 років
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <img src="img/svg/time-quarter-to_icon.svg" alt="icon">
-                                            <span>
-                                                Потенційна окупність:
-                                            </span>
-                                            <span>
-                                                7,5 років
                                             </span>
                                         </li>
                                         <li>
@@ -1148,8 +1094,15 @@
                                                 Номер телефону
                                             </p>
                                             <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
-                                            <input type="text" value="+380">
+                                            <input type="text" value="" placeholder="+380">
                                             <ul>
+                                                <li>
+                                                    <p>
+                                                        Ukraine
+                                                    </p>
+                                                    <span class="code">+380</span>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                                </li>
                                                 <li>
                                                     <p>
                                                         Bulgaria (Бьлгария)
@@ -1217,7 +1170,7 @@
                         Що про нас кажуть
                     </h2>
                 </div>
-                <div class="textimonials__slider padleft swiper">
+                <div class="textimonials__slider margleft swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="textimonials__slide">
@@ -1401,6 +1354,89 @@
             </section>
         </main>
 
+                <!-- popup "Замовити дзвінок"-->
+                <div class="popup__window popup-call">
+                    <div class="container">
+                        <div class="popup__wrapper">
+                            <div class="popup__body">
+                                <div class="popup__close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </div>
+                                <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                                <div class="popup__head">
+                                    <h2>
+                                        Замовити зворотній зв’язок
+                                    </h2>
+                                    <p>
+                                        Заповніть форму і ми зателефонуємо до вас протягом робочого дня.
+                                    </p>
+                                </div>
+                                <div class="popup__content">
+                                    <form>
+                                        <label class="inputfield">
+                                            <p>
+                                                Ім’я
+                                            </p>
+                                            <input type="text" placeholder="Як до вас звертатись?">
+                                        </label>
+                                        <label class="inputfield phone-field">
+                                            <p>
+                                                Номер телефону
+                                            </p>
+                                            <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                            <input type="text" value="" placeholder="+380">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        Ukraine
+                                                    </p>
+                                                    <span class="code">+380</span>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">+359</span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Austria
+                                                    </p>
+                                                    <span class="code">+43</span>
+                                                    <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Bulgaria (Бьлгария)
+                                                    </p>
+                                                    <span class="code">
+                                                        +359
+                                                    </span>
+                                                    <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                </li>
+                                            </ul>
+                                        </label>
+                                        <div class="inputfield text">
+                                            <p>
+                                                Коментарій
+                                            </p>
+                                            <textarea placeholder="Введіть свою відповідь"></textarea>
+                                        </div>
+                                        <!-- <button class="form-btn greenbtn sendbtn">
+                                            Відправити заявку
+                                        </button> -->
+                                        <span class="form-btn greenbtn sendbtn">
+                                            Відправити заявку
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
@@ -1482,7 +1518,7 @@
                     </a>
                 </div>
                 <div class="footer__bottom">
-                    <a href="#">
+                    <a href="privacy.html">
                         Політика конфіденційності
                     </a>
                     <p>

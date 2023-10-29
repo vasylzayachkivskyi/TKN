@@ -35,12 +35,7 @@
 .about-heroscreen__inner {
     h1 {
         color: var(--White, #FBFBFB);
-        font-family: Mont;
-        font-size: 64px;
-        font-style: normal;
         font-weight: 500;
-        line-height: 130%;
-        letter-spacing: -0.25px;
     }
 
     p {
@@ -57,7 +52,7 @@
 //  about-info section ----------------------- //
 
 .about-info {
-    padding: 60px 0;
+    padding: 60px 0 0;
 
 }
 
@@ -140,13 +135,20 @@
     }
 
 
+
 }
 
 .about-agents__item-right {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 110px;
+    height: 110px;
+
     img {
         border-radius: 8px;
-        word-wrap: 110px;
-        height: 110px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
     }
 }
 
@@ -235,7 +237,8 @@
     position: absolute;
     right: 31px;
     top: -100px;
-    
+    z-index: 2;
+
     h4 {
         margin-bottom: 24px;
         color: var(--White, #FBFBFB);
@@ -244,7 +247,7 @@
         font-weight: 500;
         line-height: 120%;
     }
-    
+
     &-info {
         border-radius: 16px;
         background: var(--Black, #050505);
@@ -254,7 +257,8 @@
 
         li {
             margin-bottom: 16px;
-            &:last-child{
+
+            &:last-child {
                 margin-bottom: 0;
             }
         }
@@ -280,9 +284,203 @@
         }
     }
 
+    &-btn--mobile a,
     &-btn a {
         padding: 9px 24px 9px 16px;
         height: 40px;
         display: inline-flex;
+    }
+    &-btn--mobile{
+        display: none;
+    }
+}
+
+
+//  ADAPTIVE ---------------- //
+
+@media (max-width:1399.8px) {
+    .about-agents__item-left p {
+        font-size: 16px;
+        padding-right: 20px;
+    }
+
+    .about-agents__item-right {
+        width: 90px;
+        height: 90px;
+    }
+
+    .about-heroscreen__inner {
+        h1 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width:1199.8px) {
+    .office {
+        padding-bottom: 120px;
+    }
+
+    .about-info__inner-image,
+    .about-info__inner-content {
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width:991.8px) {
+    .office__box h4 {
+        font-size: 20px;
+    }
+
+    .office__box-info span {
+        font-size: 14px;
+    }
+
+    .office__box-info li {
+        margin-bottom: 8px;
+    }
+
+    .office__box {
+        right: 20px;
+        top: -100px;
+    }
+
+    .office__box-info {
+        margin-bottom: 10px;
+        width: 300px;
+    }
+
+    .about-info__inner-content {
+        margin-bottom: 40px;
+    }
+
+    .about-info__inner-image {
+        margin-bottom: 60px;
+    }
+
+    .about-heroscreen {
+        &:after {
+            background: linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0) 151.53%);
+            left: 0;
+            top: 0;
+            transform: none;
+        }
+    }
+
+    .about-heroscreen__inner p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:767.8px) {
+    .office {
+        padding-bottom: 56px;
+    }
+    .office__inner-img{
+        margin-bottom: 24px;
+    }
+    .office__box-btn--mobile {
+        display: block;
+        a{
+            width: 100%;
+        }
+    }
+    .office__box-btn a{
+        display: none;
+    }
+    .office__box-info {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    .office__box {
+        position: relative;
+        right: initial;
+        top: initial;
+    }
+    .about-agents__slider-arrows .swiper-button-next, .about-agents__slider-arrows .swiper-button-prev {
+        width: 48px;
+        height: 32px;
+        margin: 0px 16px;
+    }
+
+    .about-agents__item-right {
+        width: 90px;
+        height: 90px;
+    }
+
+    .about-heroscreen__inner {
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width:575.8px) {
+    .about-agents {
+        padding-bottom: 55px;
+    }
+
+    .about-agents__item-left {
+        width: calc(100% - 56px);
+        position: relative;
+
+        a {
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-right: 0;
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .about-agents__item-right {
+        border-radius: 50%;
+        order: 1;
+        width: 48px;
+        height: 48px;
+
+    }
+
+    .about-agents__item-left {
+        order: 2;
+    }
+
+    .about-agents__item {
+        padding: 11px 8px;
+        margin-bottom: 8px;
+    }
+
+    .about-info__inner-content {
+        margin-bottom: 24px;
+    }
+
+    .about-info__inner-image {
+        margin-bottom: 56px;
+    }
+
+    .about-info {
+        padding: 56px 0 0;
+    }
+
+    .about-heroscreen__inner {
+        p {
+            font-size: 14px;
+        }
     }
 }

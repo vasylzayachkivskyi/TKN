@@ -20,8 +20,8 @@
                 <div class="header__inner">
                     <div class="header__logo">
                         <a href="index.html">
-                            <img class="black-logo" src="img/svg/logo.svg" alt="logo">
-                            <img class="white-logo" src="img/svg/footer_logo.svg" alt="logo">
+                            <img class="black-logo" src="img/header_logo.png" alt="logo">
+                            <img class="white-logo" src="img/header_logo_white.png" alt="logo">
                         </a>
                     </div>
                     <nav class="header__nav">
@@ -37,7 +37,7 @@
                                     <a href="owner.html">Власникам</a>
                                 </li>
                                 <li>
-                                    <a href="#">Вакансії</a>
+                                    <a href="career.html">Вакансії</a>
                                 </li>
                                 <li>
                                     <a href="about.html">Про Нас</a>
@@ -69,7 +69,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#" class="header__btn">
+                            <a href="#" class="header__btn popup__btn" data-popup="popup-call">
                                 Замовити дзвінок
                             </a>
                         </div>
@@ -307,7 +307,7 @@
                                 </div>
                                 <div class="col-lg-5 image-col">
                                     <div class="steps__inner-img">
-                                        <img src="img/steps_2.svg" alt="img">
+                                        <img src="img/owner_image.png" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +478,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="objects__slider padleft swiper">
+                <div class="objects__slider margleft swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="objects__slide">
@@ -829,8 +829,15 @@
                                                 Номер телефону
                                             </p>
                                             <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
-                                            <input type="text" value="+380">
+                                            <input type="text" value="" placeholder="+380">
                                             <ul>
+                                                <li>
+                                                    <p>
+                                                        Ukraine
+                                                    </p>
+                                                    <span class="code">+380</span>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                                </li>
                                                 <li>
                                                     <p>
                                                         Bulgaria (Бьлгария)
@@ -980,7 +987,90 @@
 
         </main>
 
-        <!-- popup -->
+        <!-- popup "Замовити дзвінок"-->
+        <div class="popup__window popup-call">
+            <div class="container">
+                <div class="popup__wrapper">
+                    <div class="popup__body">
+                        <div class="popup__close">
+                            <img src="img/svg/close.svg" alt="close">
+                        </div>
+                        <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                        <div class="popup__head">
+                            <h2>
+                                Замовити зворотній зв’язок
+                            </h2>
+                            <p>
+                                Заповніть форму і ми зателефонуємо до вас протягом робочого дня.
+                            </p>
+                        </div>
+                        <div class="popup__content">
+                            <form>
+                                <label class="inputfield">
+                                    <p>
+                                        Ім’я
+                                    </p>
+                                    <input type="text" placeholder="Як до вас звертатись?">
+                                </label>
+                                <label class="inputfield phone-field">
+                                    <p>
+                                        Номер телефону
+                                    </p>
+                                    <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                    <input type="text" value="" placeholder="+380">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Ukraine
+                                            </p>
+                                            <span class="code">+380</span>
+                                            <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">+359</span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Austria
+                                            </p>
+                                            <span class="code">+43</span>
+                                            <img src="img/svg/flag-Austria.svg" alt="bg">
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Bulgaria (Бьлгария)
+                                            </p>
+                                            <span class="code">
+                                                +359
+                                            </span>
+                                            <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                        </li>
+                                    </ul>
+                                </label>
+                                <div class="inputfield text">
+                                    <p>
+                                        Коментарій
+                                    </p>
+                                    <textarea placeholder="Введіть свою відповідь"></textarea>
+                                </div>
+                                <!-- <button class="form-btn greenbtn sendbtn">
+                                    Відправити заявку
+                                </button> -->
+                                <span class="form-btn greenbtn sendbtn">
+                                    Відправити заявку
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- popup "Залишити заявку"-->
         <div class="popup__window popup-request">
             <div class="container">
                 <div class="popup__wrapper">
@@ -1010,8 +1100,15 @@
                                         Номер телефону
                                     </p>
                                     <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
-                                    <input type="text" value="+380">
+                                    <input type="text" value="" placeholder="+380">
                                     <ul>
+                                        <li>
+                                            <p>
+                                                Ukraine
+                                            </p>
+                                            <span class="code">+380</span>
+                                            <img src="img/svg/flag-Ukraine.svg" alt="bg">
+                                        </li>
                                         <li>
                                             <p>
                                                 Bulgaria (Бьлгария)
@@ -1171,7 +1268,7 @@
                     </a>
                 </div>
                 <div class="footer__bottom">
-                    <a href="#">
+                    <a href="privacy.html">
                         Політика конфіденційності
                     </a>
                     <p>

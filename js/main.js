@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     // CHANGE HEADER WITH SCROLL --------------------------- //
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 40) {
+        if ($(this).scrollTop() > 0) {
             $('.header').addClass('change-bg');
         } else {
             $('.header').removeClass('change-bg');
@@ -25,15 +25,19 @@ $(document).ready(function () {
     var windowWidth = $(document).width(),
         containerWidth = $('.container').width(),
         paddingContainer = ((windowWidth - containerWidth) / 2);
-    $('.padleft').css('margin-left', paddingContainer);
-    $('.padright').css('margin-right', paddingContainer);
+    $('.margleft').css('margin-left', paddingContainer);
+    $('.margright').css('margin-right', paddingContainer);
+    $('.padright').css('padding-right', paddingContainer);
+    $('.padleft').css('padding-left', paddingContainer);
 
     $(window).resize(function () {
         var windowWidth = $(document).width(),
             containerWidth = $('.container').width(),
             paddingContainer = ((windowWidth - containerWidth) / 2);
-        $('.padleft').css('margin-left', paddingContainer);
-        $('.padright').css('margin-right', paddingContainer);
+        $('.margleft').css('margin-left', paddingContainer);
+        $('.margright').css('margin-right', paddingContainer);
+        $('.padright').css('padding-right', paddingContainer);
+        $('.padleft').css('padding-left', paddingContainer);
     });
 
     // PROPOSITION SLIDER ----- //
@@ -114,6 +118,9 @@ $(document).ready(function () {
 
     // DROPDOWN MENU ------------ //
     $('.has-dropdown').on('click', function () {
+        var dropdownBox = $(this).next('.dropdown-box');
+        $('.dropdown-box').not(dropdownBox).slideUp();
+        $('.has-dropdown').not(this).removeClass('active');
         $(this).toggleClass('active');
         $(this).next('.dropdown-box').slideToggle();
     });
@@ -127,7 +134,7 @@ $(document).ready(function () {
     });
     $(document).on('click', function (event) {
         var target = $(event.target);
-        if (!target.closest('.has-dropdown, .sliderange').length) {
+        if (!target.closest('.has-dropdown, .sliderange, .grey-field>.dropdown-box').length) {
             $('.has-dropdown').removeClass('active');
             $('.has-dropdown').next('.dropdown-box').slideUp();
         }
@@ -245,69 +252,311 @@ $(document).ready(function () {
 
 
 
+    if ($('.sliderange').length) {
+        $('.sliderange').each(function () {
+            var $sliderange = $(this),
+                $range = $sliderange.find(".js-range-slider"),
+                $inputFrom = $sliderange.find(".js-input-from"),
+                $inputTo = $sliderange.find(".js-input-to"),
+                instance,
+                min = $sliderange.attr('data-min'),
+                max = $sliderange.attr('data-max'),
+                from = $sliderange.attr('data-min'),
+                to = $sliderange.attr('data-max');
+            console.log($sliderange);
 
-    $('.sliderange').each(function () {
-        var $sliderange = $(this),
-            $range = $sliderange.find(".js-range-slider"),
-            $inputFrom = $sliderange.find(".js-input-from"),
-            $inputTo = $sliderange.find(".js-input-to"),
-            instance,
-            min = $sliderange.attr('data-min'),
-            max = $sliderange.attr('data-max'),
-            from = $sliderange.attr('data-min'),
-            to = $sliderange.attr('data-max');
-        console.log($sliderange);
-
-        $range.ionRangeSlider({
-            skin: "round",
-            type: "double",
-            min: min,
-            max: max,
-            from: from,
-            to: to,
-            onStart: updateInputs,
-            onChange: updateInputs
-        });
-        instance = $range.data("ionRangeSlider");
-        function updateInputs(data) {
-            from = data.from;
-            to = data.to;
-            $inputFrom.prop("value", from);
-            $inputTo.prop("value", to);
-        }
-
-        $inputFrom.on("input", function () {
-            var val = $(this).prop("value");
-            if (val < min) {
-                val = min;
-            } else if (val > to) {
-                val = to;
+            $range.ionRangeSlider({
+                skin: "round",
+                type: "double",
+                min: min,
+                max: max,
+                from: from,
+                to: to,
+                onStart: updateInputs,
+                onChange: updateInputs
+            });
+            instance = $range.data("ionRangeSlider");
+            function updateInputs(data) {
+                from = data.from;
+                to = data.to;
+                $inputFrom.prop("value", from);
+                $inputTo.prop("value", to);
             }
-            instance.update({
-                from: val
+
+            $inputFrom.on("input", function () {
+                var val = $(this).prop("value");
+                if (val < min) {
+                    val = min;
+                } else if (val > to) {
+                    val = to;
+                }
+                instance.update({
+                    from: val
+                });
+            });
+
+            $inputTo.on("input", function () {
+                var val = $(this).prop("value");
+                if (val < from) {
+                    val = from;
+                } else if (val > max) {
+                    val = max;
+                }
+                instance.update({
+                    to: val
+                });
             });
         });
+    }
 
-        $inputTo.on("input", function () {
-            var val = $(this).prop("value");
-            if (val < from) {
-                val = from;
-            } else if (val > max) {
-                val = max;
-            }
-            instance.update({
-                to: val
-            });
-        });
+    //  hover effect
+
+    $('.irs-from').on('mousedown', function () {
+        var parentBlock = $(this).closest('.sliderange');
+        parentBlock.find('.js-input-from').parent('.budget-field').addClass('hover');
+    });
+    $('.irs-from').on('mouseup', function () {
+        var parentBlock = $(this).closest('.sliderange');
+        parentBlock.find('.js-input-from').parent('.budget-field').removeClass('hover');
+    });
+    $('.irs-to').on('mousedown', function () {
+        var parentBlock = $(this).closest('.sliderange');
+        parentBlock.find('.js-input-to').parent('.budget-field').addClass('hover');
+    });
+    $('.irs-to').on('mouseup', function () {
+        var parentBlock = $(this).closest('.sliderange');
+        parentBlock.find('.js-input-to').parent('.budget-field').removeClass('hover');
     });
 
 
-        // Plyr.js 
-        if($('#video-player').length){
-            const player = new Plyr("#video-player");
+    // Plyr.js 
+    if ($('#video-player').length) {
+        const player = new Plyr("#video-player");
+    }
+
+    // input file ------ //
+    $('input[type="file"]').change(function () {
+        var fileInput = $(this);
+        var label = fileInput.closest('.inputfield.file').find('.fake-input p');
+        var removeButton = $('<p class="remove-file"><img src="img/svg/remove_file_btn.svg" alt="file"></p>');
+        // Додаємо обробник події для кнопки видалення
+        removeButton.click(function () {
+            fileInput.val('');
+            label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
+            removeButton.remove();
+            label.removeClass('loaded')
+        });
+
+        if (fileInput.prop('files').length > 0) {
+
+
+            var fileName = fileInput.prop('files')[0].name;
+            var fileExtension = fileName.split('.').pop().toLowerCase();
+
+            // Масив допустимих розширень файлів
+            var allowedExtensions = ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg', 'gif'];
+
+            if ($.inArray(fileExtension, allowedExtensions) !== -1) {
+                // Змінюємо текст та картинку, якщо файл валідний
+                label.addClass('loaded').text('Завантаження файлу');
+                fileInput.closest('.inputfield.file').append(removeButton);
+                setTimeout(function () {
+                    label.removeClass('loaded').html('<img src="img/svg/file_download_icon.svg" alt="file"> ' + fileName);
+                }, 1500);
+            } else {
+                // Якщо файл не валідний, виводимо повідомлення і скидаємо вибір файлу
+                $('.popup-not-supported').addClass('active');
+                fileInput.val('');
+                label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
+            }
+
+        } else {
+            // Якщо файл не вибраний, повертаємо початковий текст та картинку
+            label.html('<img src="img/svg/file_input_icon.svg" alt="file"> Прикріпити резюме');
         }
+    });
+
+    // estate card slider -------------------------------------- //
+    var swiper = new Swiper(".estcard__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        keyboard: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+
+            768: {
+                slidesPerView: "auto",
+            },
+        },
+    });
+
+    // more/less text
+    $('.more-btn').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).closest('.estcard__box').find('.estcard__box-moretext').slideToggle('active');
+    });
+
+    //  gallery ----------- //
+    $('[data-fancybox^="images"]').each(function () {
+        var galleryType = $(this).data('fancybox');
+
+        $(`[data-fancybox="${galleryType}"]`).fancybox({
+            thumbs: {
+                autoStart: true
+            },
+        });
+    });
+
+    // estate-tab
+    $('.estate-tab').on('click', function () {
+        $('.estate-tab').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // estate__objects-sort
+    $('.estate__objects-sort span').on('click', function () {
+        $(this).closest('.estate__objects-sort').find('ul').slideToggle();
+    });
+
+    $('.estate__objects-sort li').on('click', function () {
+        var valueText = $(this).text();
+        $('.estate__objects-sort li').removeClass('active');
+        $('.estate__objects-sort').find('ul').slideUp();
+        $(this).addClass('active');
+        $('.estate__objects-sort span').text(valueText);
+    });
+
+    // estate__objects-button (change width objects block)------------- //
+    $('.estate__objects-button').on('click', function () {
+        $('.estate__inner').toggleClass('active-objects');
+    });
+
+    // estate__map-button (change width objects block)------------- //
+    $('.estate__map-btn').on('click', function () {
+        $(this).toggleClass('active');
+        $('.estate__inner').toggleClass('active-map');
+    });
 
 
+    // open/close type objects dropdown------------- //
+    $('.estate__mobile-type p').on('click', function () {
+        $('.type-dropdown').addClass('active');
+    });
+    $('.estate__mobile-type .close-btn, .typebtn').on('click', function () {
+        $('.type-dropdown').removeClass('active');
+    });
+    $('.type-dropdown__list input').on('click', function () {
+        var valueInput = $(this).val();
+        $(this).closest('.estate__mobile-type').find('p').text(valueInput);
+    });
+
+    // open/close filter objects dropdown------------- //
+    $('.estate__mobile-filter p').on('click', function () {
+        $('.filter-dropdown').addClass('active');
+    });
+    $('.estate__mobile-filter .close-btn, .filtrbtn').on('click', function () {
+        $('.filter-dropdown').removeClass('active');
+    });
+
+
+    // change map/list on mobile ------------- //
+    $('.obj-list').on('click', function () {
+        $('.estate__inner').addClass('active-objects');
+        $('.estate__inner').removeClass('active-map');
+    });
+    $('.obj-map').on('click', function () {
+        $('.estate__inner').removeClass('active-objects');
+        $('.estate__inner').addClass('active-map');
+    });
+
+    // open/close sort obj ------------- //
+    $('.obj-sort').on('click', function () {
+        $('.mobile-sort-dropdown').addClass('active');
+    });
+    $('.mobile-sort-dropdown li, .close-sort').on('click', function () {
+        $('.mobile-sort-dropdown').removeClass('active');
+    });
+
+    $('.mobile-sort-dropdown li').on('click', function () {
+        var valueText =  $(this).data('info')
+        $('.mobile-sort-dropdown li').removeClass('active');
+        $(this).addClass('active');
+        $('.estate__mobile-sort p').text(valueText);
+    });
+
+
+    // checked grey-field ------------- //
+
+    $('.inputfield.grey-field').each(function () {
+        var $this = $(this);
+        var tooltip = $this.find('.grey-field__tooltip');
+        var inputField = $this.find('.has-dropdown input[type="text"]');
+        var closeButton;
+    
+        function updateFields() {
+            var selectedField = [];
+            $this.find('.checkfield input[type="checkbox"]:checked').each(function () {
+                selectedField.push($(this).siblings('span').text());
+            });
+    
+            var maxLength = 8;
+            var text = selectedField.join(', ');
+            var truncatedText = text;
+            if (text.length > maxLength) {
+                truncatedText = text.substring(0, maxLength) + '...';
+            }
+    
+            inputField.val(truncatedText);
+            if (selectedField.length > 0) {
+                tooltip.text(text);
+                tooltip.addClass('show');
+            } else {
+                tooltip.text('');
+                tooltip.removeClass('show');
+            }
+        }
+    
+        $this.find('.checkfield input[type="checkbox"]').change(function () {
+            updateFields();
+    
+            if (!closeButton) {
+                closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
+                closeButton.click(function () {
+                    inputField.val('');
+                    closeButton.remove();
+                    closeButton = null;
+                    $this.removeClass('active');
+                    $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
+                    updateFields();
+                });
+                $this.prepend(closeButton);
+            } else {
+                if ($this.find('.checkfield input[type="checkbox"]:checked').length === 0) {
+                    closeButton.remove();
+                    closeButton = null;
+                    updateFields();
+                }
+            }
+    
+            $this.toggleClass('active', $this.find('.checkfield input[type="checkbox"]:checked').length > 0);
+        });
+    });
+    
+    
+    
+    
+    
+    
 
 
 
