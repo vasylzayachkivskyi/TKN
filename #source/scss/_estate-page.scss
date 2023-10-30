@@ -402,6 +402,10 @@
         border-radius: 50%;
         border: 1px solid #fbfbfb;
         cursor: pointer;
+        font-size: 0;
+        span{
+            display: none;
+        }
 
         &.green {
             background-color: #159E34;
@@ -442,6 +446,7 @@
         }
 
         span {
+            display: block;
             text-align: center;
             font-size: 6px;
             font-style: normal;
