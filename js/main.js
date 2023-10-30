@@ -452,7 +452,6 @@ $(document).ready(function () {
         $('.estate__inner').toggleClass('active-map');
     });
 
-
     // open/close type objects dropdown------------- //
     $('.estate__mobile-type p').on('click', function () {
         $('.type-dropdown').addClass('active');

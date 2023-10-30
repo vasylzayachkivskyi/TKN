@@ -340,6 +340,7 @@
 
 .map-info {
     position: relative;
+
     .map-info__box {
         position: absolute;
         min-width: 150px;
@@ -357,32 +358,37 @@
         z-index: -1;
         opacity: 0;
     }
-    &:hover{
+
+    &:hover {
         .map-info__box {
             visibility: visible;
             z-index: 2;
             opacity: 1;
         }
     }
-    .map-info__image{
+
+    .map-info__image {
         width: 32px;
         background-size: cover;
         border-radius: 4px;
     }
 
     .map-info__list {
-        li{
+        li {
             display: flex;
             align-items: center;
-            &+li{
+
+            &+li {
                 margin-top: 1px;
             }
-            img{
+
+            img {
                 width: 10px;
                 height: 10px;
                 background-size: cover;
                 margin-right: 4px;
             }
+
             p {
                 color: var(--Mid-black, #383D54);
                 text-align: center;
@@ -392,7 +398,7 @@
                 line-height: normal;
             }
         }
-       
+
     }
 
     .dote {
@@ -403,7 +409,8 @@
         border: 1px solid #fbfbfb;
         cursor: pointer;
         font-size: 0;
-        span{
+
+        span {
             display: none;
         }
 
@@ -1063,7 +1070,6 @@
         }
 
         ul {
-            height: 100%;
             padding: 24px 16px 0;
 
             li {
@@ -1110,6 +1116,12 @@
         .obj-map,
         .obj-sort {
             display: inline-flex;
+            width: 147px;
+            justify-content: center;
+        }
+
+        .obj-sort {
+            border-left: 1px solid #050505;
         }
 
         .obj-list {
@@ -1150,17 +1162,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0px 8px 0px 0;
+        padding: 0px 0px 0px 0;
         height: 38px;
         border-radius: 100px;
         background: var(--White, #FBFBFB);
         box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
         position: absolute;
         z-index: 55;
-        bottom: 20px;
+        bottom: 24px;
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;
+        border: 1px solid var(--Black, #050505);
 
         a {
             color: var(--Black, #050505);
@@ -1411,7 +1424,7 @@
 
                 .typebtn {
                     height: 40px;
-                    max-width: 360px;
+                    max-width: 320px;
                     width: 100%;
                     margin: 0 auto;
                 }
@@ -1491,6 +1504,12 @@
                 padding: 24px 16px 100px;
                 overflow: auto;
 
+                .dropdown-row .irs--round .irs-handle {
+                    width: 20px;
+                    height: 20px;
+                    top: 27px;
+                }
+
                 .dropdown-row {
                     margin-bottom: 24px;
 
@@ -1556,8 +1575,11 @@
                         font-weight: 500;
                         line-height: 120%;
                         letter-spacing: 0.1px;
-                        padding: 10px 16px;
+                        padding: 10px 35px 10px 16px;
                         background: transparent;
+                    }
+                    .year-field input{
+                     padding: 10px 60px 10px 16px;
                     }
 
                     .dropdown-row .extra-controls {
@@ -1627,7 +1649,7 @@
     }
 
     .estate .selection {
-        margin: 32px 0 0;
+        margin: 0px 0 0;
     }
 
     .estate-formsect {
@@ -1653,10 +1675,28 @@
             border-radius: 20px;
         }
     }
+
+    .estate__inner {
+        min-height: 500px;
+    }
+
+    .estate__objects-inner .pagination {
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 575.8px) {
     .estate__inner {
         height: calc(100vh - 105px);
+    }
+
+    .estate {
+        padding-top: 48px;
+    }
+}
+
+@media (max-width: 374.8px) {
+    .estate__mobile-type .type-dropdown .type-dropdown__bottom .typebtn {
+        max-width: 310px;
     }
 }
