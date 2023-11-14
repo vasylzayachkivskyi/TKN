@@ -8,8 +8,7 @@
     &.change-bg {
         background-color: #f6f6f6;
     }
-
-    .white-logo {
+    .white-logo{
         display: none;
     }
 
@@ -20,15 +19,13 @@
         .black-logo {
             display: none;
         }
-
-        .white-logo {
+        .white-logo{
             display: block;
         }
 
         .header__menu a {
             color: #fbfbfb;
         }
-
         .header__menu li.active:after {
             background-color: #fbfbfb;
         }
@@ -413,7 +410,7 @@
     .header__lang-mobile {
         display: block;
         width: 100%;
-        padding: 32px 16px 0px 7px;
+        padding: 32px 16px 0px;
         border-bottom: 1px solid rgba(209, 209, 209, 0.50);
         margin: 0 16px 48px;
 
@@ -432,11 +429,6 @@
                 margin-bottom: 0;
             }
         }
-    }
-
-    .header__lang-mobile>ul li,
-    .header__lang>ul li {
-        padding: 8px 15px 8px 9px;
     }
 
     .header__btn {

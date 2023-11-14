@@ -290,8 +290,7 @@
         height: 40px;
         display: inline-flex;
     }
-
-    &-btn--mobile {
+    &-btn--mobile{
         display: none;
     }
 }
@@ -381,23 +380,18 @@
     .office {
         padding-bottom: 56px;
     }
-
-    .office__inner-img {
+    .office__inner-img{
         margin-bottom: 24px;
     }
-
     .office__box-btn--mobile {
         display: block;
-
-        a {
+        a{
             width: 100%;
         }
     }
-
-    .office__box-btn a {
+    .office__box-btn a{
         display: none;
     }
-
     .office__box-info {
         margin-bottom: 24px;
         width: 100%;
@@ -408,9 +402,7 @@
         right: initial;
         top: initial;
     }
-
-    .about-agents__slider-arrows .swiper-button-next,
-    .about-agents__slider-arrows .swiper-button-prev {
+    .about-agents__slider-arrows .swiper-button-next, .about-agents__slider-arrows .swiper-button-prev {
         width: 48px;
         height: 32px;
         margin: 0px 16px;
@@ -419,17 +411,6 @@
     .about-agents__item-right {
         width: 90px;
         height: 90px;
-    }
-
-    .about-agents__item-left {
-        span {
-            margin-bottom: 0;
-            max-width: 85%;
-        }
-        p {
-            margin-bottom: 4px;
-            max-width: 85%;
-        }
     }
 
     .about-heroscreen__inner {
