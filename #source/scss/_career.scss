@@ -731,12 +731,15 @@
 
     .cp-corporate__img {
         height: 213px;
+        width: 100%;
+        max-width: 328px;
 
         img {
             width: 100%;
             object-fit: cover;
         }
     }
+
 
     .cp-corporate__gallery-mobile {
         display: flex;
@@ -754,7 +757,7 @@
     }
 
     .cp-corporate__img.wide {
-        width: 328px;
+        width: 100%;
     }
 
     .cp-corporate__top {
