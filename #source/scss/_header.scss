@@ -215,8 +215,9 @@
 
     &>ul {
 
-        li {
-            padding: 8px 15px;
+        a {
+            display: block;
+            padding: 8px 15px 8px 43px;
             color: #050505;
             text-align: center;
             font-size: 14px;
@@ -227,11 +228,14 @@
             cursor: pointer;
             text-align: left;
             border-radius: 8px;
-            transition: .3s;
+            transition: .4s;
+            position: relative;
 
             &:before {
                 content: '';
-                display: inline-block;
+                position: absolute;
+                left: 15px;
+                top: 11px;
                 width: 18px;
                 height: 18px;
                 vertical-align: middle;
@@ -240,11 +244,10 @@
                 opacity: 0;
                 transition: .3s ease-in-out;
             }
-
-            &.active {
-                &:before {
-                    opacity: 1;
-                }
+        }
+        li.active {
+            a:before {
+                opacity: 1;
             }
         }
     }
@@ -266,7 +269,7 @@
         box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.04);
         padding: 8px;
 
-        li:hover {
+        a:hover {
             background: rgba(209, 209, 209, 0.30);
         }
     }

@@ -375,7 +375,8 @@
     .descr {
         display: none;
         padding: 16px 0 40px;
-        ol{
+
+        ol {
             padding-left: 25px;
         }
 
@@ -488,6 +489,9 @@
         .popup__close {
             text-align: right;
             display: block;
+            position: relative;
+            right: initial;
+            width: 100%;
 
             span {
                 color: var(--Black, #050505);
@@ -634,10 +638,6 @@
 }
 
 @media (max-width:767.8px) {
-    .popup__window.popup-not-supported .popup__content .popup__close {
-        position: relative;
-        right: initial;
-    }
 
     .cp-form {
         position: relative;

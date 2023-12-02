@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
     // CHANGE HEADER WITH SCROLL --------------------------- //
-    $(window).scroll(function () {
+    $(window).on('scroll load', function () {
         if ($(this).scrollTop() > 0) {
             $('.header').addClass('change-bg');
         } else {
@@ -528,6 +528,13 @@ $(document).ready(function () {
     
     
     
+
+    // ---=== CONTACT FORMS ===--- //
+
+
+
+    
+    // ---=== ************ ===--- //
 
 
 
