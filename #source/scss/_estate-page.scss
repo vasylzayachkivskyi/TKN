@@ -601,7 +601,7 @@
         }
 
         .selection__right {
-            form {
+            .form {
                 max-width: 500px;
                 flex-wrap: nowrap;
                 align-items: flex-end;
@@ -1410,7 +1410,7 @@
         background: #050505;
     }
 
-    .estate .selection .selection__right form {
+    .estate .selection .selection__right .form {
         max-width: 100%;
     }
     .estate__objects-inner {
