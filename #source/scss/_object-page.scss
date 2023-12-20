@@ -1463,13 +1463,13 @@
                 line-height: 130%;
 
                 &+p {
-                    margin-left: 8px;
                     padding-left: 10px;
 
                     &:before {
                         content: '';
                         display: inline-block;
                         vertical-align: middle;
+                        margin-right: 6px;
                         width: 2px;
                         height: 2px;
                         border-radius: 50%;
