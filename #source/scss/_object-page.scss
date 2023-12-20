@@ -915,7 +915,7 @@
 }
 
 .estcard__consultation-form {
-    form {
+    .form {
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
@@ -1096,7 +1096,7 @@
         transition: 0.3s;
         position: relative;
 
-        span {
+        .hidebtn {
             display: none;
         }
 
@@ -1357,6 +1357,15 @@
 
 //  ADAPTIVE ------------------------- //
 @media (max-width: 1399.8px) {
+    .estcard__consultation-form .inputfield {
+        width: 195px;
+    }
+    .estcard__consultation-info {
+        margin-right: 0;
+    }
+    .estcard__consultation-info .information{
+        width: 190px;
+    }
     .estcard__hidden-img {
         height: 450px;
     }
@@ -1390,6 +1399,12 @@
 }
 
 @media (max-width: 1199.8px) {
+    .estcard__consultation-info .information{
+        width: auto;
+    }
+    .estcard__consultation-form .inputfield {
+        width: 206px;
+    }
     .estcard__consultation-row {
         flex-wrap: wrap;
     }
@@ -1790,7 +1805,7 @@
         width: 100%;
         height: 38px;
 
-        span {
+        .hidebtn {
             display: block;
             color: var(--Black, #050505);
             font-size: 14px;
@@ -1816,7 +1831,7 @@
         margin-right: 0;
     }
 
-    .estcard__consultation-form form {
+    .estcard__consultation-form .form {
         flex-wrap: wrap;
     }
 
