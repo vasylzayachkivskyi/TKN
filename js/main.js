@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
     // CHANGE HEADER WITH SCROLL --------------------------- //
-    $(window).scroll(function () {
+    $(window).on('scroll load', function () {
         if ($(this).scrollTop() > 0) {
             $('.header').addClass('change-bg');
         } else {
@@ -134,7 +134,7 @@ $(document).ready(function () {
     });
     $(document).on('click', function (event) {
         var target = $(event.target);
-        if (!target.closest('.has-dropdown, .sliderange, .grey-field>.dropdown-box').length) {
+        if (!target.closest('.has-dropdown, .sliderange').length) {
             $('.has-dropdown').removeClass('active');
             $('.has-dropdown').next('.dropdown-box').slideUp();
         }
@@ -309,30 +309,6 @@ $(document).ready(function () {
         });
     }
 
-    //  hover effect
-
-    $('.irs-from').on('mousedown', function () {
-        var parentBlock = $(this).closest('.sliderange');
-        parentBlock.find('.js-input-from').parent('.budget-field').addClass('hover');
-    });
-    $('.irs-from').on('mouseup', function () {
-        var parentBlock = $(this).closest('.sliderange');
-        parentBlock.find('.js-input-from').parent('.budget-field').removeClass('hover');
-    });
-    $('.irs-to').on('mousedown', function () {
-        var parentBlock = $(this).closest('.sliderange');
-        parentBlock.find('.js-input-to').parent('.budget-field').addClass('hover');
-    });
-    $('.irs-to').on('mouseup', function () {
-        var parentBlock = $(this).closest('.sliderange');
-        parentBlock.find('.js-input-to').parent('.budget-field').removeClass('hover');
-    });
-
-    // estate-tab
-    $('.estate-tab').on('click', function () {
-        $('.estate-tab').removeClass('active');
-        $(this).addClass('active');
-    });
 
     // Plyr.js 
     if ($('#video-player').length) {
@@ -452,6 +428,7 @@ $(document).ready(function () {
         $('.estate__inner').toggleClass('active-map');
     });
 
+
     // open/close type objects dropdown------------- //
     $('.estate__mobile-type p').on('click', function () {
         $('.type-dropdown').addClass('active');
@@ -503,56 +480,47 @@ $(document).ready(function () {
 
     $('.inputfield.grey-field').each(function () {
         var $this = $(this);
-        var tooltip = $this.find('.grey-field__tooltip');
         var inputField = $this.find('.has-dropdown input[type="text"]');
         var closeButton;
     
-        function updateFields() {
+        $this.find('.checkfield input[type="checkbox"]').change(function () {
             var selectedField = [];
             $this.find('.checkfield input[type="checkbox"]:checked').each(function () {
                 selectedField.push($(this).siblings('span').text());
             });
     
-            var maxLength = 8;
-            var text = selectedField.join(', ');
-            var truncatedText = text;
-            if (text.length > maxLength) {
-                truncatedText = text.substring(0, maxLength) + '...';
-            }
-    
-            inputField.val(truncatedText);
             if (selectedField.length > 0) {
-                tooltip.text(text);
-                tooltip.addClass('show');
-            } else {
-                tooltip.text('');
-                tooltip.removeClass('show');
-            }
-        }
-    
-        $this.find('.checkfield input[type="checkbox"]').change(function () {
-            updateFields();
-    
-            if (!closeButton) {
-                closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
-                closeButton.click(function () {
-                    inputField.val('');
-                    closeButton.remove();
-                    closeButton = null;
-                    $this.removeClass('active');
-                    $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
-                    updateFields();
-                });
-                $this.prepend(closeButton);
-            } else {
-                if ($this.find('.checkfield input[type="checkbox"]:checked').length === 0) {
-                    closeButton.remove();
-                    closeButton = null;
-                    updateFields();
+                var maxLength = 8;
+                var text = selectedField.join(', ');
+                if (text.length > maxLength) {
+                    text = text.substring(0, maxLength) + '...';
                 }
-            }
+                inputField.val(text);
+                $this.addClass('active');
     
-            $this.toggleClass('active', $this.find('.checkfield input[type="checkbox"]:checked').length > 0);
+                
+                if (!closeButton) {
+                    closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
+                    closeButton.click(function () {
+                        inputField.val('');
+                        closeButton.remove();
+                        closeButton = null; 
+                        $this.removeClass('active');
+                        $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
+                    });
+                    $this.prepend(closeButton);
+                }
+            } else {
+                inputField.val('');
+                
+                if (closeButton) {
+                    closeButton.remove();
+                    closeButton = null; 
+                }
+                
+                $this.removeClass('active');
+                $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
+            }
         });
     });
     
@@ -560,7 +528,15 @@ $(document).ready(function () {
     
     
     
+
+    // ---=== CONTACT FORMS ===--- //
+
+
+
     
+    // ---=== ************ ===--- //
+
+
 
 });
 
