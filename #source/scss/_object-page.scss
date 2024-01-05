@@ -73,10 +73,10 @@
 
 .hidden-fragment {
     position: relative;
-    color: transparent!important;
+    color: transparent !important;
     margin: 0 2px;
 
-    &:after {
+    &:before {
         content: '';
         position: absolute;
         left: 0;
@@ -507,7 +507,7 @@
         font-weight: 500;
         line-height: 130%;
         letter-spacing: 0.5px;
-        margin: 4px;
+        margin: 0 0 4px;
     }
 
     h3 {
@@ -519,9 +519,6 @@
         letter-spacing: 0.3px;
     }
 }
-
-
-
 
 
 
@@ -686,18 +683,24 @@
         line-height: 120%;
         letter-spacing: 0.15px;
 
+        &:after {
+            content: '';
+            width: 2px;
+            height: 2px;
+            display: inline-block;
+            background-color: rgba(5, 5, 5, 0.70);
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
         &+span {
             padding-left: 8px;
+        }
 
-            &:before {
-                content: '';
-                width: 2px;
-                height: 2px;
-                display: inline-block;
-                background-color: rgba(5, 5, 5, 0.70);
-                border-radius: 50%;
-                vertical-align: middle;
-                margin-right: 8px;
+        &:last-child {
+            &:after {
+                display: none;
             }
         }
 
@@ -730,8 +733,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
-        margin-left: 20px;
-        padding-left: 24px;
+        margin-right: 20px;
+        padding-right: 24px;
         position: relative;
         margin-bottom: 0;
 
@@ -740,7 +743,31 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 0;
+            right: 0;
+            width: 4px;
+            height: 4px;
+            background: #22232A;
+            border-radius: 50%;
+        }
+
+        &:last-of-type {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    b {
+        margin-right: 20px;
+        padding-right: 24px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
             width: 4px;
             height: 4px;
             background: #22232A;
@@ -786,21 +813,24 @@
             line-height: 130%;
             position: relative;
             margin-bottom: 0;
+            margin-right: 16px;
+            padding-right: 18px;
 
-            &+p {
-                margin-left: 16px;
-                padding-left: 18px;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background: #22232A;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
 
+            &:last-child {
                 &:after {
-                    content: "";
-                    position: absolute;
-                    width: 2px;
-                    height: 2px;
-                    border-radius: 50%;
-                    background: #22232A;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    display: none;
                 }
             }
         }
@@ -810,7 +840,7 @@
 .estcard__box-parametres {
     ul {
         display: flex;
-        max-width: 550px;
+        max-width: 650px;
         width: 100%;
         flex-wrap: wrap;
     }
@@ -824,6 +854,7 @@
         line-height: 120%;
         letter-spacing: 0.3px;
         padding-left: 36px;
+        padding-right: 10px;
         position: relative;
         margin-top: 25px;
 
@@ -929,9 +960,11 @@
         margin-bottom: 0px;
         position: relative;
         margin-right: 24px;
+
         .error-text {
             display: none;
         }
+
         &.error {
             p {
                 color: #EF333D;
@@ -1054,6 +1087,7 @@
         padding: 9px 16px;
         background: transparent;
     }
+
     input {
         &::placeholder {
             color: rgba(209, 209, 209, 0.80);
@@ -1125,8 +1159,10 @@
     margin-bottom: 32px;
     position: relative;
 
-    img {
+    >iframe,
+    >img {
         width: 100%;
+        height: 350px;
         background-size: cover;
     }
 
@@ -1169,7 +1205,7 @@
     }
 }
 
-.hidden-slide-img{
+.hidden-slide-img {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1180,7 +1216,8 @@
     top: 0;
     left: 0;
     background-image: url(../img/hidden-slide-img.png);
-    p{
+
+    p {
         color: var(--White, #FBFBFB);
         font-family: Mont;
         font-size: 12px;
@@ -1189,8 +1226,9 @@
         line-height: 120%;
     }
 }
-.hidden-slide{
-    .gallery-slider{
+
+.hidden-slide {
+    .gallery-slider {
         opacity: 0;
     }
 }
@@ -1360,12 +1398,15 @@
     .estcard__consultation-form .inputfield {
         width: 195px;
     }
+
     .estcard__consultation-info {
         margin-right: 0;
     }
-    .estcard__consultation-info .information{
+
+    .estcard__consultation-info .information {
         width: 190px;
     }
+
     .estcard__hidden-img {
         height: 450px;
     }
@@ -1399,12 +1440,14 @@
 }
 
 @media (max-width: 1199.8px) {
-    .estcard__consultation-info .information{
+    .estcard__consultation-info .information {
         width: auto;
     }
+
     .estcard__consultation-form .inputfield {
         width: 206px;
     }
+
     .estcard__consultation-row {
         flex-wrap: wrap;
     }
@@ -1443,6 +1486,14 @@
 }
 
 @media (max-width: 767.8px) {
+    .estcard__box .map {
+
+        >iframe,
+        >img {
+            height: 300px;
+        }
+    }
+
     .estcard__box-info {
         .mobile-info {
             display: flex;
@@ -1507,6 +1558,9 @@
     .estcard__box-row b {
         width: 100%;
         font-size: 24px;
+        &:before{
+            display: none;
+        }
     }
 
     .estcard__box-row p {
@@ -1517,21 +1571,11 @@
         margin-bottom: 8px;
 
         &:before {
-            display: none;
+            width: 2px;
+            height: 2px;
+            background-color: rgba(34, 35, 42, 0.60);
         }
 
-        &+p {
-            padding-left: 10px;
-            margin-left: 8px;
-
-            &:before {
-                content: '';
-                display: inline-block;
-                width: 2px;
-                height: 2px;
-                background-color: rgba(34, 35, 42, 0.60);
-            }
-        }
     }
 
     .estcard__box-head {

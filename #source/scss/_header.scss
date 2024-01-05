@@ -117,16 +117,22 @@
     }
 }
 
+.header__nav {
+    width: calc(100% - 153px);
+}
 .header__nav-wrapper {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 0;
+    margin: 0 0 0 auto;
 }
 
 .header__menu {
     display: flex;
     align-items: center;
     margin-right: 12px;
+    margin: 0 0 0 auto;
 
     li+li {
         margin-left: 12px;
@@ -171,6 +177,9 @@
     }
 }
 
+.header__lang {
+margin: 0 auto 0 0;
+}
 .header__lang-mobile,
 .header__lang {
     cursor: pointer;
@@ -297,7 +306,7 @@
 }
 
 .header__btn {
-    margin-left: 85px;
+    // margin-left: 85px;
     padding: 8px 59px;
     color: var(--Black, #050505);
     text-align: center;

@@ -311,9 +311,10 @@ $(document).ready(function () {
 
 
     // Plyr.js 
-    if ($('#video-player').length) {
-        const player = new Plyr("#video-player");
+    if ($('.plyr__video-embed').length) {
+        const players = Array.from(document.querySelectorAll('.plyr__video-embed')).map(plyrElement => new Plyr(plyrElement));
     }
+    // const player = new Plyr("#video-player");
 
     // input file ------ //
     $('input[type="file"]').change(function () {
