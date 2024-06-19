@@ -269,15 +269,15 @@
 .estate__map {
     width: 55%;
     height: 100%;
-    transition: .3s;
+    transition: .5s;
     position: relative;
-
+    
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
+    
     iframe {
         width: 100%;
         height: 100%;
@@ -341,7 +341,7 @@
 .estate__objects {
     height: 100%;
     width: 45%;
-    transition: .3s;
+    transition: .5s;
     padding-left: 26px;
     padding-right: 16px;
     position: relative;
@@ -399,7 +399,7 @@
 }
 
 .estate__objects-btnwrap {
-    height: 100%;
+    height: 252px;
     position: absolute;
     width: 57px;
     top: 50%;
@@ -410,8 +410,8 @@
     &:before {
         content: '';
         position: absolute;
-        background-image: url(../img/element_btn_objects.png);
-        left: 0px;
+        background-image: url(../img/element_btn_objects_btn.png);
+        right: 17px;
         top: 50%;
         transform: translateY(-50%);
         height: 100%;
@@ -423,8 +423,8 @@
 
 .estate__objects-button {
     position: absolute;
-    top: 44%;
-    left: 15px;
+    top: 33%;
+    left: 10px;
     z-index: 999;
     cursor: pointer;
     height: 80px;

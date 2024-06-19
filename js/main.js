@@ -164,7 +164,6 @@ $(document).ready(function () {
         var target = $(event.target);
         if (!target.closest('.phone-field').length) {
             $('.phone-field').find('ul').slideUp();
-            $('.phone-field input').focus();
         }
     });
     $('.phone-field li').on('click', function () {
@@ -483,7 +482,7 @@ $(document).ready(function () {
     });
 
     $('.mobile-sort-dropdown li').on('click', function () {
-        var valueText =  $(this).data('info')
+        var valueText = $(this).data('info')
         $('.mobile-sort-dropdown li').removeClass('active');
         $(this).addClass('active');
         $('.estate__mobile-sort p').text(valueText);
@@ -496,13 +495,13 @@ $(document).ready(function () {
         var $this = $(this);
         var inputField = $this.find('.has-dropdown input[type="text"]');
         var closeButton;
-    
+
         $this.find('.checkfield input[type="checkbox"]').change(function () {
             var selectedField = [];
             $this.find('.checkfield input[type="checkbox"]:checked').each(function () {
                 selectedField.push($(this).siblings('span').text());
             });
-    
+
             if (selectedField.length > 0) {
                 var maxLength = 8;
                 var text = selectedField.join(', ');
@@ -511,14 +510,14 @@ $(document).ready(function () {
                 }
                 inputField.val(text);
                 $this.addClass('active');
-    
-                
+
+
                 if (!closeButton) {
                     closeButton = $('<img src="img/svg/close-black.svg" alt="close" class="close">');
                     closeButton.click(function () {
                         inputField.val('');
                         closeButton.remove();
-                        closeButton = null; 
+                        closeButton = null;
                         $this.removeClass('active');
                         $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
                     });
@@ -526,28 +525,28 @@ $(document).ready(function () {
                 }
             } else {
                 inputField.val('');
-                
+
                 if (closeButton) {
                     closeButton.remove();
-                    closeButton = null; 
+                    closeButton = null;
                 }
-                
+
                 $this.removeClass('active');
                 $this.find('.checkfield input[type="checkbox"]').prop('checked', false);
             }
         });
     });
-    
-    
-    
-    
-    
+
+
+
+
+
 
     // ---=== CONTACT FORMS ===--- //
 
 
 
-    
+
     // ---=== ************ ===--- //
 
 
