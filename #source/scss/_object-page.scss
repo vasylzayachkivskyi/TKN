@@ -1152,7 +1152,7 @@
             display: none;
         }
 
-        &:before {
+        &:after {
             content: '';
             margin: 0;
             position: absolute;
@@ -1162,6 +1162,11 @@
             background-image: url(../img/svg/form_btn_icon.svg);
             width: 20px;
             height: 20px;
+        }
+        &.sending {
+            &::after{
+                display: none;
+            }
         }
 
         &:hover {
