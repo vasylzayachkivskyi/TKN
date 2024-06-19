@@ -30,7 +30,36 @@
     }
 
     a {
-        display: inline-flex;
+
+        width: 225px;
+        height: 48px;
+        margin: 0 auto;
+        color: #fff;
+        border-radius: 100px;
+        background: var(--Accent-darker-green, #159E34);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--White, #FBFBFB);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0.15px;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            background: #1FA83E;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            background-size: cover;
+            margin-right: 8px;
+            margin-bottom: 3px
+        }
     }
 }
 
@@ -684,6 +713,11 @@
 }
 
 @media (max-width:575.8px) {
+    .cp-heroscreen__inner a {
+        width: 223px;
+        height: 38px;
+    }
+
     .cp-form .checkfield span {
         text-align: left;
     }

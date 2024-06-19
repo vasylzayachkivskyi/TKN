@@ -148,15 +148,28 @@ $(document).ready(function () {
     });
 
     // PHONE CODE DROPDOWN ----------- //
-    $('.phone-field input').on('click', function () {
+    $('.phone-field').on('click', '.triger', function () {
         $(this).closest('.phone-field').find('ul').slideToggle();
+        $('.phone-field input').focus();
     });
 
     $('.inputfield.phone-field ul li').click(function () {
         var imgSrc = $(this).find('img').attr('src');
         var code = $(this).find('.code').text().trim();
-        $('.inputfield.phone-field .flag').attr('src', imgSrc);
-        $('.inputfield.phone-field input').val(code);
+        $(this).closest('.phone-field').find('.flag').attr('src', imgSrc);
+        $(this).closest('.phone-field').find('input').val(code);
+    });
+
+    $(document).on('click', function (event) {
+        var target = $(event.target);
+        if (!target.closest('.phone-field').length) {
+            $('.phone-field').find('ul').slideUp();
+            $('.phone-field input').focus();
+        }
+    });
+    $('.phone-field li').on('click', function () {
+        $(this).closest('.phone-field').find('ul').slideUp();
+        $('.phone-field input').focus();
     });
 
     // slider ---- //

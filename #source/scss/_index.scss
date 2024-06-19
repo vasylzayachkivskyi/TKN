@@ -6,13 +6,13 @@
 }
 
 .heroscreen__inner {
-    padding-top: 20%;
+    padding-top: 15%;
     position: relative;
 }
 
 .heroscreen__title {
     color: #000;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .heroscreen__bg {
@@ -22,12 +22,60 @@
     right: 0;
 }
 
+.heroscreen__bg-mobile {
+    display: none;
+}
+
 .heroscreen__video {
     position: absolute;
-    width: 80%;
+    width: 94%;
     top: 15%;
     right: 0;
     z-index: -1;
+}
+
+.heroscreen__descr {
+    p {
+        color: #696969;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 24px;
+    }
+}
+
+.heroscreen__btn {
+    a {
+        width: 327px;
+        height: 48px;
+        color: #fff;
+        border-radius: 100px;
+        background: var(--Accent-darker-green, #159E34);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--White, #FBFBFB);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0.15px;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            background: #1FA83E;
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+            background-size: cover;
+            margin-right: 8px;
+            margin-bottom: 3px
+        }
+    }
 }
 
 .heroscreen__search {
@@ -217,6 +265,7 @@
         .year-field:after {
             content: 'Років';
         }
+
         .budget-field:after {
             content: '$';
         }
@@ -296,7 +345,7 @@
 //  proposition section--------------------------------
 
 .proposition {
-    padding: 120px 0;
+    padding: 150px 0 120px;
 
     .wiew-all-mobile {
         display: none;
@@ -463,6 +512,7 @@
         font-weight: 500;
         line-height: normal;
         display: inline-block;
+
         &:after {
             content: '';
             display: inline-block;
@@ -477,10 +527,11 @@
         &+span {
             margin-left: 8px;
         }
-        &:last-child{
+
+        &:last-child {
             &:after {
                 display: none;
-               }
+            }
         }
     }
 }
@@ -1095,6 +1146,19 @@
             position: relative;
             cursor: pointer;
 
+            .triger {
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                cursor: pointer;
+                z-index: 3;
+                background-color: #fff;
+                border-radius: 100px 0 0 100px;
+                background: transparent;
+            }
+
             .flag {
                 position: absolute;
                 width: 16px;
@@ -1104,7 +1168,8 @@
                 left: 16px;
             }
 
-            &:after {
+
+            label:after {
                 content: '';
                 position: absolute;
                 background-image: url(../img/svg/arrow-field-phone.svg);
@@ -1112,10 +1177,12 @@
                 height: 18px;
                 left: 36px;
                 top: 35px;
+                cursor: pointer;
             }
 
             input {
                 padding-left: 62px;
+                cursor: pointer;
             }
 
             ul {
@@ -1986,8 +2053,31 @@
         display: none;
     }
 
+    .heroscreen__inner {
+        padding-top: 155px;
+    }
+
+    .heroscreen__btn a {
+        width: 223px;
+        height: 38px;
+        margin-bottom: 70px;
+    }
+
     .heroscreen {
-        background-image: url(../img/mobile__heroscreen.png);
+        position: relative;
+    }
+
+    .heroscreen__bg-mobile {
+        position: absolute;
+        display: block;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .proposition {
+        padding: 0 0 70px;
     }
 
     .heroscreen__filter button {
@@ -2207,7 +2297,11 @@
     }
 
     .heroscreen__inner {
-        padding-top: 77px;
+        padding-top: 115px;
+    }
+
+    .heroscreen__descr p {
+        margin-bottom: 16px;
     }
 
     .heroscreen__filter {

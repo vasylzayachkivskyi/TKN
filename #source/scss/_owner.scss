@@ -947,6 +947,19 @@
         &.phone-field {
             cursor: pointer;
 
+            .triger {
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                cursor: pointer;
+                z-index: 3;
+                background-color: #fff;
+                border-radius: 100px 0 0 100px;
+                background: transparent;
+            }
+
             .flag {
                 position: absolute;
                 width: 16px;
@@ -956,7 +969,7 @@
                 left: 16px;
             }
 
-            &:after {
+            label:after {
                 content: '';
                 position: absolute;
                 background-image: url(../img/svg/arrow-field-phone.svg);
@@ -964,10 +977,12 @@
                 height: 18px;
                 left: 36px;
                 top: 35px;
+                cursor: pointer;
             }
 
             input {
                 padding-left: 62px;
+                cursor: pointer;
             }
 
             ul {
