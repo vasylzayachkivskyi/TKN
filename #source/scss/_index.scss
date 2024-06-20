@@ -3,6 +3,7 @@
 .heroscreen {
     position: relative;
     min-height: 650px;
+    margin-bottom: 150px;
 }
 
 .heroscreen__inner {
@@ -345,11 +346,11 @@
 //  proposition section--------------------------------
 
 .proposition {
-    padding: 150px 0 120px;
+    padding: 0px 0 120px;
+}
 
-    .wiew-all-mobile {
-        display: none;
-    }
+.wiew-all-mobile {
+    display: none;
 }
 
 .proposition__head {
@@ -1701,10 +1702,12 @@
         width: 750px;
     }
 
-
+    .heroscreen {
+        margin-bottom: 90px;
+    }
 
     .proposition {
-        padding: 90px 0;
+        padding: 0 0 90px;
     }
 
     .advantages__item {
@@ -1860,7 +1863,7 @@
 
 
     .proposition {
-        padding: 70px 0;
+        padding: 0 0 70px;
     }
 
     .heroscreen__filter {
@@ -1883,6 +1886,10 @@
     .heroscreen__filter button {
         width: 48%;
         margin-left: 0;
+    }
+
+    .heroscreen {
+        margin-bottom: 70px;
     }
 
     .heroscreen__bg {
@@ -2098,28 +2105,26 @@
         display: none;
     }
 
-    .proposition {
-        .wiew-all-mobile {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 14px;
-            padding: 10px 0;
+    .wiew-all-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14px;
+        padding: 10px 0;
 
-            img {
-                margin-right: 8px;
-            }
+        img {
+            margin-right: 8px;
+        }
 
-            a {
-                color: var(--Black, #050505);
-                text-align: center;
-                font-family: Mont;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 170%;
-                letter-spacing: 0.15px;
-            }
+        a {
+            color: var(--Black, #050505);
+            text-align: center;
+            font-family: Mont;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 170%;
+            letter-spacing: 0.15px;
         }
     }
 
@@ -2314,7 +2319,7 @@
 
 
     .proposition {
-        padding: 43px 0 56px;
+        padding: 0 0 56px;
     }
 
     .advantages__title {

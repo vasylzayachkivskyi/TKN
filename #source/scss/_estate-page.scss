@@ -271,13 +271,13 @@
     height: 100%;
     transition: .5s;
     position: relative;
-    
+
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     iframe {
         width: 100%;
         height: 100%;
@@ -362,6 +362,7 @@
 
         .estate__objects-button {
             left: -7px;
+
             img {
                 transform: rotate(180deg);
             }
@@ -370,6 +371,7 @@
         .estate__objects-wrapper .proposition__slide {
             max-width: 24%;
         }
+
         .estate__objects-wrapper {
             gap: 15px;
         }
@@ -690,7 +692,7 @@
 }
 
 .estate-formsect {
-    .selection__left{
+    .selection__left {
         max-width: 700px;
         margin: 0 auto;
     }
@@ -994,9 +996,11 @@
     .estate__inner {
         height: calc(100vh - 143px);
     }
+
     .estate__inner.active-objects .estate__objects .estate__objects-wrapper {
         gap: 10px;
     }
+
     .estate__inner.active-objects .estate__objects .estate__objects-wrapper .proposition__slide {
         max-width: 49%;
     }
@@ -1055,7 +1059,7 @@
 
     .estate__mobile-filter,
     .estate__mobile-type {
-
+        cursor: pointer;
 
         p {
             color: var(--Mid-black, #212121);
@@ -1094,7 +1098,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 999;
+            z-index: 9999;
             width: 100%;
             height: 100vh;
             background: #F6F6F6;
@@ -1126,6 +1130,7 @@
                     z-index: 99;
                     width: 24px;
                     height: 24px;
+                    cursor: pointer;
                 }
 
                 h4 {
@@ -1216,7 +1221,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 999;
+            z-index: 9999;
             width: 100%;
             height: 100vh;
             background: #F6F6F6;
@@ -1226,6 +1231,7 @@
             opacity: 0;
             transform: translateY(-100%);
             transition: .4s;
+
             .checkfield {
                 margin-bottom: 16px;
             }
@@ -1251,6 +1257,7 @@
                     z-index: 99;
                     width: 24px;
                     height: 24px;
+                    cursor: pointer;
                 }
 
                 h4 {
@@ -1413,6 +1420,7 @@
     .estate .selection .selection__right .form {
         max-width: 100%;
     }
+
     .estate__objects-inner {
 
         &::-webkit-scrollbar {
@@ -1434,6 +1442,7 @@
     .estate__inner {
         height: calc(100vh - 105px);
     }
+
     .estate__objects-inner {
         overflow-y: auto;
         overflow-x: hidden;
