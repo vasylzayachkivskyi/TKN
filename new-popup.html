@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKN</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/rangeSlider.min.css">
+    <link rel="stylesheet" href="css/lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="pagewrapper">
+
+        <main class="main">
+
+            <section class="heroscreen" style="padding: 300px 0 0" >
+                <div class="container">
+
+                    <div class="heroscreen__btn" >
+                        <a href="#" class="popup__btn" data-popup="popup-leaverequest">
+                            <img src="img/svg/btn_white_arrow.svg" alt="arrow">
+                            Залиште заявку
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+                <!-- popup "Замовити дзвінок"-->
+                <div class="popup__window popup-leaverequest">
+                    <div class="container">
+                        <div class="popup__wrapper">
+                            <div class="popup__body">
+                                <div class="popup__close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </div>
+                                <img src="img/svg/popup-frame.svg" alt="frame" class="popup-frame">
+                                <div class="popup__head">
+                                    <p style="margin: 0 0 20px;">
+                                        Хочете отримати індивідуальну
+                                        підбірку торгівельної нерухомості?
+                                    </p>
+                                    <h2>
+                                        Залиште заявку
+                                    </h2>
+                                </div>
+                                <div class="popup__content">
+                                    <div class="selection__right">
+                                        <div class="form">
+                                            <div class="inputfield">
+                                                <p>
+                                                    Ім’я
+                                                </p>
+                                                <input type="text" placeholder="Як до вас звертатись?">
+                                                <span class="error-text">
+                                                    *Error. Describe error
+                                                </span>
+                                            </div>
+                                            <div class="inputfield phone-field">
+                                                <p>
+                                                    Номер телефону
+                                                </p>
+                                                <label>
+                                                    <div class="triger"></div>
+                                                    <img src="img/svg/flag-Ukraine.svg" alt="ua" class="flag">
+                                                    <input type="text" value="+380">
+                                                </label>
+                                                <ul>
+                                                    <li>
+                                                        <p>
+                                                            Bulgaria (Бьлгария)
+                                                        </p>
+                                                        <span class="code">+359</span>
+                                                        <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            Austria
+                                                        </p>
+                                                        <span class="code">+43</span>
+                                                        <img src="img/svg/flag-Austria.svg" alt="bg">
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            Bulgaria (Бьлгария)
+                                                        </p>
+                                                        <span class="code">
+                                                            +359
+                                                        </span>
+                                                        <img src="img/svg/flag-Bulgaria.svg" alt="bg">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-slide">
+                                                <span>Бюджет</span>
+                                                <div class="sliderange" data-min="0" data-max="20000">
+                                                    <div class="range-slider">
+                                                        <input type="text" class="js-range-slider" value="" />
+                                                    </div>
+                                                    <div class="extra-controls">
+                                                        <div class="budget-field">
+                                                            <input type="text" class="js-input-from" value="0" data-min="0">
+                                                        </div>
+                                                        <span>-</span>
+                                                        <div class="budget-field">
+                                                            <input type="text" class="js-input-to" value="0" data-max="20000">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Під власний бізнес</span>
+                                            </label>
+                                            <label class="checkfield">
+                                                <input type="checkbox">
+                                                <span>Для пасивного доходу</span>
+                                            </label>
+                                            <!-- <button class="formbtn greenbtn sendbtn">
+                                                Отримати підбірку
+                                            </button> -->
+                                            <span class="formbtn greenbtn sendbtn">
+                                                Отримати підбірку
+                                                <span class="done-text">
+                                                    Відправлено
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/rangeSlider.min.js"></script>
+    <script src="js/lib/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
